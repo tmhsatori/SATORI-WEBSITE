@@ -50,43 +50,39 @@
           var Slide = ('#' + id + '-exterior');
           //switch color of nav links based on current slide
           var slideColor = (id + '-color');
-
-          
-          $("#facebook-icon, #twitter-icon").removeClass();
-          $("#facebook-icon, #twitter-icon").addClass(slideColor);
-          $("#main-nav, #satori-logo").removeClass();
-          $("#main-nav, #satori-logo").addClass(slideColor).addClass('active');
-          
+          if(!(id == 'twitter' || id == 'facebook')) {
+            $("#main-nav li#home, #main-nav li#about, #main-nav li#solutions, #main-nav li#approach, #main-nav li#contact, #main-nav").removeClass();
+            $("#main-nav").addClass(slideColor);
+            $(this).addClass('active');
+          }
           var k = $("Slide").css('bottom');
           var bottom = $("#interior-page").css('bottom').replace('px','');
           g = bottom;
-            if(id == 'twitter' || id == 'facebook' ) {
-              alert("ALERT");
-              return false;
-            }
-            else if(pageState == 'interior' & id == 'home' ) {
-              hideExteriorSlides();
-              $(iSlide).fadeOut();
-              $(Slide).fadeIn();
-              $('#interior-page').stop().animate({'bottom': -ih + 'px'}, 1500, 'easeOutQuint');
-              pageState = 'exterior';
-            }
-            else if(pageState == 'interior') {
-              hideInteriorSlides();
-              $(iSlide).fadeIn();
-              pageState == 'interior';
-            }
-            else if(pageState == 'exterior' & id == 'home' ) {
-              e.preventDefault();
-            }
-            else if (pageState == 'exterior') {
-              hideInteriorSlides();
-              $(iSlide).fadeIn();
-              $('#interior-page').stop().animate({'bottom': '0px'}, 500, 'easeInQuad');
-              pageState = 'interior';
-            }           
-       });
-      }
+            if(!(id == 'twitter' || id == 'facebook')) {
+              if(pageState == 'interior' & id == 'home' ) {
+                hideExteriorSlides();
+                $(iSlide).fadeOut();
+                $(Slide).fadeIn();
+                $('#interior-page').stop().animate({'bottom': -ih + 'px'}, 1500, 'easeOutQuint');
+                pageState = 'exterior';
+              }
+              else if(pageState == 'interior') {
+                hideInteriorSlides();
+                $(iSlide).fadeIn();
+                pageState == 'interior';
+              }
+              else if(pageState == 'exterior' & id == 'home' ) {
+                e.preventDefault();
+              }
+              else if (pageState == 'exterior') {
+                hideInteriorSlides();
+                $(iSlide).fadeIn();
+                $('#interior-page').stop().animate({'bottom': '0px'}, 500, 'easeInQuad');
+                pageState = 'interior';
+              }  
+            }                
+          });
+        }
       // SLIDE THE NAV UP TO THE APPROPRIATE SLIDE WITH ANY OBJECT THAT HAS THE CLASS 'more'
       function SlidenavUp() {       
         $(".more").unbind('click').click(function(e) {
@@ -99,12 +95,14 @@
       }
       // ADDING THE ACTIVE STATE TO THE NAVIGATION
       function activeFunc() {
+
         $('#main-nav li a').unbind('click').click(function(event){
+          var sid = $(this).attr('id');
           if((pageState == 'exterior') & ($(this).hasClass('active')) ) {
               $(this).css({'cursor': 'pointer'});
               event.stopPropagation();
             }
-          else {
+          else if(!(sid == 'twitter-icon' || sid == 'facebook-icon')) {
             $('#main-nav a').removeClass('active');
             $(this).css({'cursor': 'pointer'});
             $(this).addClass('active');

@@ -45,61 +45,61 @@ a#satori-logo {
   text-indent: -2000px;
   margin-right: 100px;
 }
-li#twitter a, li#facebook a {
+#twitter a, #facebook a {
   width: 34px;
   height: 40px;
   display: block;
   padding: 0;
   text-indent: -2000px;
 }
-li#facebook a {
+#facebook a {
   width: 20px;
 }
-  a#satori-logo.home-color {
+  .home-color #satori-logo {
     background: url(../img/logo/logo-sprite.jpg) -81px 0 no-repeat;
   }
-  a#satori-logo.about-color {
+  .about-color #satori-logo {
     background: url(../img/logo/logo-sprite.jpg) -202px 0 no-repeat;
   }
-  a#satori-logo.solutions-color {
+  .solutions-color #satori-logo {
     background: url(../img/logo/logo-sprite.jpg) -121px 0 no-repeat;
   }
-  a#satori-logo.approach-color {
+  .approach-color #satori-logo {
     background: url(../img/logo/logo-sprite.jpg) -161px 0 no-repeat;
   }
-  a#satori-logo.contact-color {
+  .contact-color #satori-logo {
     background: url(../img/logo/logo-sprite.jpg) -40px 0 no-repeat;
   }
 
-  li#twitter a.home-color {
+  .home-color #twitter a {
     background: url(../img/socialicons.png) -55px 0 no-repeat;
   }
-  li#twitter a.about-color {
+  .about-color #twitter a {
     background: url(../img/socialicons.png) -115px 0 no-repeat;
   }
-  li#twitter a.solutions-color {
+  .solutions-color #twitter a {
     background: url(../img/socialicons.png) -230px 0 no-repeat;
   }
-  li#twitter a.approach-color {
+  .approach-color #twitter a {
     background: url(../img/socialicons.png) -175px 0 no-repeat;
   }
-  li#twitter a.contact-color {
+  .contact-color #twitter a {
     background: url(../img/socialicons.png) -290px 0 no-repeat;
   }
 
-  li#facebook a.home-color {
+  .home-color #facebook a {
     background: url(../img/socialicons.png) -90px 0 no-repeat;
   }
-  li#facebook a.about-color {
+  .about-color #facebook a {
     background: url(../img/socialicons.png) -149px 0 no-repeat;
   }
-  li#facebook a.solutions-color {
+  .solutions-color #facebook a {
     background: url(../img/socialicons.png) -263px 0 no-repeat;
   }
-  li#facebook a.approach-color {
+  .approach-color #facebook a {
     background: url(../img/socialicons.png) -208px 0 no-repeat;
   }
-  li#facebook a.contact-color {
+  .contact-color #facebook a {
     background: url(../img/socialicons.png) -325px 0 no-repeat;
   }
 
@@ -145,9 +145,6 @@ nav {
 
           #main-nav.home-color li a {
             color: $yellow-color;
-          }
-          #main-nav.home-color li a.active {
-            background: url(../img/logo/logo-white.jpg) no-repeat;
           }
           #main-nav.about-color li a {
             color: $green-color;
