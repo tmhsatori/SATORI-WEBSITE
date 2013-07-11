@@ -51,11 +51,11 @@
           //switch color of nav links based on current slide
           var slideColor = (id + '-color');
 
-          //
-          //$("#facebook, #twitter").removeClass();
-          //$("#facebook, #twitter").addClass(slideColor);
-          $("#main-nav").removeClass();
-          $("#main-nav").addClass(slideColor);
+          
+          $("#facebook-icon, #twitter-icon").removeClass();
+          $("#facebook-icon, #twitter-icon").addClass(slideColor);
+          $("#main-nav, #satori-logo").removeClass();
+          $("#main-nav, #satori-logo").addClass(slideColor).addClass('active');
           
           var k = $("Slide").css('bottom');
           var bottom = $("#interior-page").css('bottom').replace('px','');
