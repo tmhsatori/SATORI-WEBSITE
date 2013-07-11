@@ -1,0 +1,9 @@
+
+@font-face {
+	font-family: 'Ribbon';
+	src: url('Ribbon.eot?') format('eot'), 
+	     url('Ribbon.otf')  format('opentype'),
+	     url('Ribbon.woff') format('woff'), 
+	     url('Ribbon.ttf')  format('truetype'),
+	     url('Ribbon.svg#Ribbon') format('svg');
+}

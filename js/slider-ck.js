@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#mask").css({height:$("#panel-1").height()});$("#panel").width(parseInt($("#mask").width()*$("#panel div").length));$("#panel div").width($("#mask").width());$("a[rel=panel]").click(function(){$("a[rel=panel]").removeClass("selected");$(this).addClass("selected");$("#mask").scrollTo($(this).attr("href"),800);return!1})});

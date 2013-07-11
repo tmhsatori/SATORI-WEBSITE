@@ -1,0 +1,8 @@
+
+@font-face {
+	font-family: 'Homestead-Display';
+	src: url('Homestead-Display.eot?') format('eot'), 
+	     url('Homestead-Display.woff') format('woff'), 
+	     url('Homestead-Display.ttf')  format('truetype'),
+	     url('Homestead-Display.svg#Homestead-Display') format('svg');
+}
