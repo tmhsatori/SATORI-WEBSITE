@@ -55,6 +55,10 @@ a#satori-logo {
 #facebook a {
   width: 20px;
 }
+#facebook a:hover, #twitter a:hover, a#satori-logo:hover {
+  @include opacity(0.7);
+}
+
   .home-color #satori-logo {
     background: url(../img/logo/logo-sprite.jpg) -81px 0 no-repeat;
   }
@@ -197,12 +201,11 @@ nav {
   cursor: pointer;
   position: relative;
   background: #222;
-  margin: 10px 20px;
+  margin: 10px 25px;
   @include border-radius(4px, 4px);
   font-family: Gotham-Book;
   color: $yellow-color;
 }
-
 .texture {
   width: 100%;
   height: 100%;
@@ -258,27 +261,23 @@ nav {
 // HOMEPAGE-SLIDE STYLING
 #home-slide h1 {
   font-family: Ribbon;
-  font-size: 5.8em;
+  font-size: 6.1em;
   color: $yellow-color;
-  text-align: center;
 }
 #home-slide h1.headingOne {
   font-family: Homestead-Display;
   font-size: 6.7em;
   color: $yellow-color;
-  text-align: center;
 }
 #home-slide h2 {
   font-family: Mensch;
   font-size: 2.0em;
   color: $yellow-color;
-  text-align: center;
 }
 #home-slide h2.headingTwo {
   font-family: Gotham-Book;
   font-size: 2.1em;
   color: $yellow-color;
-  text-align: center;
 }
 .icon-circles {
   width: 100%;
@@ -292,7 +291,7 @@ nav {
   display: block;
   margin: 0 auto;
   float: left;
-  margin: 10px;
+  margin: 0 10px;
   width: 97px;
   height: 97px;
   cursor: pointer;
@@ -466,7 +465,7 @@ ul.slider li.slide {
 .carousel-linked-nav {
   width: 100%;
   height: 50px;
-  top: 60%;
+  top: 70%;
   left: 45%;
   position: absolute;
   z-index: 2500;

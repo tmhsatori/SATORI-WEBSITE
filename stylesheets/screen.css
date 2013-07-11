@@ -128,81 +128,87 @@ a#satori-logo {
 }
 
 /* line 58, ../sass/screen.scss */
+#facebook a:hover, #twitter a:hover, a#satori-logo:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+
+/* line 62, ../sass/screen.scss */
 .home-color #satori-logo {
   background: url(../img/logo/logo-sprite.jpg) -81px 0 no-repeat;
 }
 
-/* line 61, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 .about-color #satori-logo {
   background: url(../img/logo/logo-sprite.jpg) -202px 0 no-repeat;
 }
 
-/* line 64, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 .solutions-color #satori-logo {
   background: url(../img/logo/logo-sprite.jpg) -121px 0 no-repeat;
 }
 
-/* line 67, ../sass/screen.scss */
+/* line 71, ../sass/screen.scss */
 .approach-color #satori-logo {
   background: url(../img/logo/logo-sprite.jpg) -161px 0 no-repeat;
 }
 
-/* line 70, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 .contact-color #satori-logo {
   background: url(../img/logo/logo-sprite.jpg) -40px 0 no-repeat;
 }
 
-/* line 74, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 .home-color #twitter a {
   background: url(../img/socialicons.png) -55px 0 no-repeat;
 }
 
-/* line 77, ../sass/screen.scss */
+/* line 81, ../sass/screen.scss */
 .about-color #twitter a {
   background: url(../img/socialicons.png) -115px 0 no-repeat;
 }
 
-/* line 80, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 .solutions-color #twitter a {
   background: url(../img/socialicons.png) -230px 0 no-repeat;
 }
 
-/* line 83, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 .approach-color #twitter a {
   background: url(../img/socialicons.png) -175px 0 no-repeat;
 }
 
-/* line 86, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 .contact-color #twitter a {
   background: url(../img/socialicons.png) -290px 0 no-repeat;
 }
 
-/* line 90, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 .home-color #facebook a {
   background: url(../img/socialicons.png) -90px 0 no-repeat;
 }
 
-/* line 93, ../sass/screen.scss */
+/* line 97, ../sass/screen.scss */
 .about-color #facebook a {
   background: url(../img/socialicons.png) -149px 0 no-repeat;
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 .solutions-color #facebook a {
   background: url(../img/socialicons.png) -263px 0 no-repeat;
 }
 
-/* line 99, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 .approach-color #facebook a {
   background: url(../img/socialicons.png) -208px 0 no-repeat;
 }
 
-/* line 102, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 .contact-color #facebook a {
   background: url(../img/socialicons.png) -325px 0 no-repeat;
 }
 
-/* line 108, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
 nav {
   position: relative;
   z-index: 2500;
@@ -211,25 +217,25 @@ nav {
   background: #222;
 }
 
-/* line 115, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 ul#main-nav {
   width: 100%;
   padding: 10px 0;
 }
 
-/* line 119, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 ul#main-nav li {
   float: left;
   margin-left: 4em;
 }
 
-/* line 123, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 ul#main-nav li#twitter, ul#main-nav li#facebook {
   float: right;
   margin-left: 2em;
 }
 
-/* line 127, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 ul#main-nav li a {
   display: block;
   color: white;
@@ -239,48 +245,48 @@ ul#main-nav li a {
   padding-top: 10px;
 }
 
-/* line 135, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 ul#main-nav li a#satori-logo {
   padding-top: 0;
 }
 
-/* line 138, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
 ul#main-nav li a:hover {
   color: white;
 }
 
-/* line 141, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
 ul#main-nav li a.active {
   color: white !important;
   cursor: default;
 }
 
-/* line 146, ../sass/screen.scss */
+/* line 150, ../sass/screen.scss */
 #main-nav.home-color li a {
   color: #ffbf24;
 }
 
-/* line 149, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 #main-nav.about-color li a {
   color: #00cc7a;
 }
 
-/* line 152, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 #main-nav.solutions-color li a {
   color: #e27985;
 }
 
-/* line 155, ../sass/screen.scss */
+/* line 159, ../sass/screen.scss */
 #main-nav.approach-color li a {
   color: #2cc0b7;
 }
 
-/* line 158, ../sass/screen.scss */
+/* line 162, ../sass/screen.scss */
 #main-nav.contact-color li a {
   color: #ff5ccb;
 }
 
-/* line 162, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
 #exterior-page {
   position: fixed;
   top: 0;
@@ -290,7 +296,7 @@ ul#main-nav li a.active {
   z-index: 0;
 }
 
-/* line 171, ../sass/screen.scss */
+/* line 175, ../sass/screen.scss */
 #interior-page {
   width: 100%;
   overflow: hidden;
@@ -300,7 +306,7 @@ ul#main-nav li a.active {
   background: black;
 }
 
-/* line 180, ../sass/screen.scss */
+/* line 184, ../sass/screen.scss */
 #home-exterior, #about-exterior, #solutions-exterior, #approach-exterior, #contact-exterior, #home-interior, #about-interior, #solutions-interior, #approach-interior, #contact-interior {
   width: 100%;
   height: 100%;
@@ -309,7 +315,7 @@ ul#main-nav li a.active {
   background: white;
 }
 
-/* line 188, ../sass/screen.scss */
+/* line 192, ../sass/screen.scss */
 .more {
   display: block;
   width: 60px;
@@ -322,7 +328,7 @@ ul#main-nav li a.active {
   cursor: pointer;
   position: relative;
   background: #222;
-  margin: 10px 20px;
+  margin: 10px 25px;
   -webkit-border-radius: 4px 4px;
   -moz-border-radius: 4px / 4px;
   border-radius: 4px / 4px;
@@ -330,7 +336,7 @@ ul#main-nav li a.active {
   color: #ffbf24;
 }
 
-/* line 206, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
 .texture {
   width: 100%;
   height: 100%;
@@ -339,93 +345,90 @@ ul#main-nav li a.active {
   top: 0;
 }
 
-/* line 213, ../sass/screen.scss */
+/* line 216, ../sass/screen.scss */
 #home-exterior .texture, #home-interior .texture {
   background: url(../img/slide_4_bk_tile2.png) repeat;
 }
 
-/* line 216, ../sass/screen.scss */
+/* line 219, ../sass/screen.scss */
 #about-exterior .texture, #about-interior .texture {
   background: url(../img/slide_2_bk_tile.png) repeat;
 }
 
-/* line 219, ../sass/screen.scss */
+/* line 222, ../sass/screen.scss */
 #solutions-exterior .texture, #solutions-interior .texture {
   background: url(../img/slide_1_bk_tile2.png) repeat;
 }
 
-/* line 222, ../sass/screen.scss */
+/* line 225, ../sass/screen.scss */
 #approach-exterior .texture, #approach-interior .texture {
   background: url(../img/slide_3_bk_tile2.png) repeat;
 }
 
-/* line 225, ../sass/screen.scss */
+/* line 228, ../sass/screen.scss */
 #contact-exterior .texture, #contact-interior .texture {
   background: url(../img/interior_about_bk_tile.png) repeat;
 }
 
-/* line 230, ../sass/screen.scss */
+/* line 233, ../sass/screen.scss */
 .exteriorImage {
   margin: 0 auto;
 }
 
-/* line 233, ../sass/screen.scss */
+/* line 236, ../sass/screen.scss */
 #home-slide .exteriorImage {
   background: url(../img/home-person.png) no-repeat;
   width: 299px;
   height: 570px;
 }
 
-/* line 238, ../sass/screen.scss */
+/* line 241, ../sass/screen.scss */
 #about-slide .exteriorImage {
   background: url(../img/sitguy.png) no-repeat;
   width: 439px;
   height: 559px;
 }
 
-/* line 243, ../sass/screen.scss */
+/* line 246, ../sass/screen.scss */
 #solutions-slide .exteriorImage {
   background: url(../img/pinkgirl.png) no-repeat;
   width: 439px;
   height: 597px;
 }
 
-/* line 248, ../sass/screen.scss */
+/* line 251, ../sass/screen.scss */
 #approach-slide .exteriorImage {
   background: url(../img/happyguy.png) no-repeat;
   width: 460px;
   height: 537px;
 }
 
-/* line 253, ../sass/screen.scss */
+/* line 256, ../sass/screen.scss */
 #contact-slide .exteriorImage {
   background: url(../img/happyguy-purp.png) no-repeat;
   width: 460px;
   height: 537px;
 }
 
-/* line 259, ../sass/screen.scss */
+/* line 262, ../sass/screen.scss */
 #home-slide h1 {
   font-family: Ribbon;
-  font-size: 5.8em;
+  font-size: 6.1em;
   color: #ffbf24;
-  text-align: center;
 }
 
-/* line 265, ../sass/screen.scss */
+/* line 267, ../sass/screen.scss */
 #home-slide h1.headingOne {
   font-family: Homestead-Display;
   font-size: 6.7em;
   color: #ffbf24;
-  text-align: center;
 }
 
-/* line 271, ../sass/screen.scss */
+/* line 272, ../sass/screen.scss */
 #home-slide h2 {
   font-family: Mensch;
   font-size: 2.0em;
   color: #ffbf24;
-  text-align: center;
 }
 
 /* line 277, ../sass/screen.scss */
@@ -433,44 +436,43 @@ ul#main-nav li a.active {
   font-family: Gotham-Book;
   font-size: 2.1em;
   color: #ffbf24;
-  text-align: center;
 }
 
-/* line 283, ../sass/screen.scss */
+/* line 282, ../sass/screen.scss */
 .icon-circles {
   width: 100%;
 }
 
-/* line 286, ../sass/screen.scss */
+/* line 285, ../sass/screen.scss */
 .icon-circles li {
   width: 150px;
   display: block;
   float: left;
 }
 
-/* line 291, ../sass/screen.scss */
+/* line 290, ../sass/screen.scss */
 .iconOne, .iconTwo, .iconThree {
   display: block;
   margin: 0 auto;
   float: left;
-  margin: 10px;
+  margin: 0 10px;
   width: 97px;
   height: 97px;
   cursor: pointer;
   background: url(../img/icons/dog-icon.png) no-repeat;
 }
 
-/* line 302, ../sass/screen.scss */
+/* line 301, ../sass/screen.scss */
 .iconTwo {
   background: url(../img/icons/girl-icon.png) no-repeat;
 }
 
-/* line 305, ../sass/screen.scss */
+/* line 304, ../sass/screen.scss */
 .iconThree {
   background: url(../img/icons/guy-icon.png) no-repeat;
 }
 
-/* line 310, ../sass/screen.scss */
+/* line 309, ../sass/screen.scss */
 #about-slide h1 {
   font-family: Blanch;
   font-size: 8.2em;
@@ -478,7 +480,7 @@ ul#main-nav li a.active {
   text-align: center;
 }
 
-/* line 316, ../sass/screen.scss */
+/* line 315, ../sass/screen.scss */
 #about-slide h1.headingOne {
   font-family: Homestead-Display;
   font-size: 6.7em;
@@ -486,7 +488,7 @@ ul#main-nav li a.active {
   text-align: center;
 }
 
-/* line 322, ../sass/screen.scss */
+/* line 321, ../sass/screen.scss */
 #about-slide h2 {
   font-family: Homestead-Display;
   font-size: 2.0em;
@@ -494,7 +496,7 @@ ul#main-nav li a.active {
   text-align: center;
 }
 
-/* line 328, ../sass/screen.scss */
+/* line 327, ../sass/screen.scss */
 #about-slide h2.headingTwo {
   font-family: Gotham-Book;
   font-size: 2.0em;
@@ -502,7 +504,7 @@ ul#main-nav li a.active {
   text-align: center;
 }
 
-/* line 336, ../sass/screen.scss */
+/* line 335, ../sass/screen.scss */
 #solutions-slide h1 {
   font-family: Homestead-Display;
   font-size: 2.8em;
@@ -510,7 +512,7 @@ ul#main-nav li a.active {
   text-align: center;
 }
 
-/* line 342, ../sass/screen.scss */
+/* line 341, ../sass/screen.scss */
 #solutions-slide h1.headingOne {
   font-family: Mensch;
   font-size: 2.8em;
@@ -518,7 +520,7 @@ ul#main-nav li a.active {
   text-align: center;
 }
 
-/* line 348, ../sass/screen.scss */
+/* line 347, ../sass/screen.scss */
 #solutions-slide h2 {
   font-family: Blanch;
   font-size: 8.7em;
@@ -526,7 +528,7 @@ ul#main-nav li a.active {
   text-align: center;
 }
 
-/* line 354, ../sass/screen.scss */
+/* line 353, ../sass/screen.scss */
 #solutions-slide h2.headingTwo {
   font-family: Gotham-Book;
   font-size: 1.4em;
@@ -534,7 +536,7 @@ ul#main-nav li a.active {
   text-align: center;
 }
 
-/* line 362, ../sass/screen.scss */
+/* line 361, ../sass/screen.scss */
 #approach-slide h1 {
   font-family: Ribbon;
   font-size: 3.5em;
@@ -544,7 +546,7 @@ ul#main-nav li a.active {
   margin: 0;
 }
 
-/* line 370, ../sass/screen.scss */
+/* line 369, ../sass/screen.scss */
 #approach-slide h1.headingOne {
   font-family: Mensch;
   font-size: 5.8em;
@@ -554,7 +556,7 @@ ul#main-nav li a.active {
   margin: 0;
 }
 
-/* line 378, ../sass/screen.scss */
+/* line 377, ../sass/screen.scss */
 #approach-slide h2 {
   font-family: Homestead-Display;
   font-size: 8.7em;
@@ -564,7 +566,7 @@ ul#main-nav li a.active {
   margin: 0;
 }
 
-/* line 386, ../sass/screen.scss */
+/* line 385, ../sass/screen.scss */
 #approach-slide h2.headingTwo {
   font-family: Gotham-Book;
   font-size: 1.4em;
@@ -574,18 +576,18 @@ ul#main-nav li a.active {
   margin: 0;
 }
 
-/* line 396, ../sass/screen.scss */
+/* line 395, ../sass/screen.scss */
 .hideint {
   display: none;
 }
 
-/* line 400, ../sass/screen.scss */
+/* line 399, ../sass/screen.scss */
 .innerContentWrapper {
   width: 100%;
   position: relative;
 }
 
-/* line 405, ../sass/screen.scss */
+/* line 404, ../sass/screen.scss */
 .innerContentWrapper h1 {
   font-size: 30px;
   color: black;
@@ -596,65 +598,65 @@ ul#main-nav li a.active {
   font-style: normal;
 }
 
-/* line 415, ../sass/screen.scss */
+/* line 414, ../sass/screen.scss */
 .top1 {
   margin-top: 200px;
 }
 
-/* line 418, ../sass/screen.scss */
+/* line 417, ../sass/screen.scss */
 .top2 {
   margin-top: 100px;
 }
 
-/* line 421, ../sass/screen.scss */
+/* line 420, ../sass/screen.scss */
 .top3 {
   margin-top: 50px;
 }
 
-/* line 425, ../sass/screen.scss */
+/* line 424, ../sass/screen.scss */
 form-horizontal {
   background: black;
 }
 
-/* line 430, ../sass/screen.scss */
+/* line 429, ../sass/screen.scss */
 .subnav {
   height: 40px;
   width: 100%;
   background: #cacaca;
 }
 
-/* line 436, ../sass/screen.scss */
+/* line 435, ../sass/screen.scss */
 ul.sub {
   width: 100%;
   position: relative;
 }
 
-/* line 440, ../sass/screen.scss */
+/* line 439, ../sass/screen.scss */
 ul.sub li {
   float: left;
   margin: 10px 4em 10px;
 }
 
-/* line 444, ../sass/screen.scss */
+/* line 443, ../sass/screen.scss */
 ul.sub li a {
   color: #222;
   font-size: 14px;
   text-decoration: none;
 }
 
-/* line 449, ../sass/screen.scss */
+/* line 448, ../sass/screen.scss */
 ul.sub li a.activeSlide {
   color: #00cc7a;
 }
 
-/* line 452, ../sass/screen.scss */
+/* line 451, ../sass/screen.scss */
 ul.slider {
   overflow: hidden;
   width: 100%;
   height: 100%;
 }
 
-/* line 457, ../sass/screen.scss */
+/* line 456, ../sass/screen.scss */
 ul.slider li.slide {
   position: relative;
   width: 100%;
@@ -663,23 +665,23 @@ ul.slider li.slide {
   float: left;
 }
 
-/* line 466, ../sass/screen.scss */
+/* line 465, ../sass/screen.scss */
 .carousel-linked-nav {
   width: 100%;
   height: 50px;
-  top: 60%;
+  top: 70%;
   left: 45%;
   position: absolute;
   z-index: 2500;
   text-indent: -2000px;
 }
 
-/* line 475, ../sass/screen.scss */
+/* line 474, ../sass/screen.scss */
 .carousel-linked-nav li {
   float: left;
 }
 
-/* line 479, ../sass/screen.scss */
+/* line 478, ../sass/screen.scss */
 .carousel-linked-nav li a {
   display: block;
   width: 25px;
@@ -687,7 +689,7 @@ ul.slider li.slide {
   background: url(../img/navDots.png) 0 0 no-repeat;
 }
 
-/* line 485, ../sass/screen.scss */
+/* line 484, ../sass/screen.scss */
 .carousel-linked-nav li.active {
   background: url(../img/navDots.png) -25px 0 no-repeat;
 }
