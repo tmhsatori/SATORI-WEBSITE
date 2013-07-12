@@ -4,10 +4,14 @@
 
 @import "compass/reset";
 @import "compass/css3";
+
 @import url('fonts.css');
 //Homestead-Display
 //Ribbon
 //Nexa
+//Mensch
+//Gotham-Books
+//Blanch
 
 //COLOR VARIABLES GLOBAL
 $green-color : #00cc7a;
@@ -230,19 +234,19 @@ nav {
   z-index: 0;
   top: 0;
 }
-  #home-exterior .texture, #home-interior .texture {
+  #home-slide .texture, #home-interior .texture {
     background: url(../img/slide_4_bk_tile2.png) repeat;
   }
-  #about-exterior .texture, #about-interior .texture {
+  #about-slide .texture, #about-interior .texture {
     background: url(../img/slide_2_bk_tile.png) repeat;
   }
-  #solutions-exterior .texture, #solutions-interior .texture {
+  #solutions-slide .texture, #solutions-interior .texture {
     background: url(../img/slide_1_bk_tile2.png) repeat;
   }
-  #approach-exterior .texture, #approach-interior .texture {
+  #approach-slide .texture, #approach-interior .texture {
     background: url(../img/slide_3_bk_tile2.png) repeat;
   }
-  #contact-exterior .texture, #contact-interior .texture {
+  #contact-slide .texture, #contact-interior .texture {
     background: url(../img/interior_about_bk_tile.png) repeat;
   }
 
