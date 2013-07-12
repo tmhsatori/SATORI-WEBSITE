@@ -223,9 +223,6 @@ nav {
 #contact-slide .more {
   color: $purple-color;
 }
-
-
-
 .texture {
   width: 100%;
   height: 100%;
@@ -299,41 +296,31 @@ nav {
   font-size: 2.1em;
   color: $yellow-color;
 }
-
+.icon-circles {
+  width: 100%;
+}
+.icon-circles li {
+  width: 150px;
+  display: block;
+  float: left;
+}
 .iconOne, .iconTwo, .iconThree  {
   display: block;
-  position: absolute;
   margin: 0 auto;
   float: left;
+  margin: 0 10px;
   width: 97px;
   height: 97px;
   cursor: pointer;
-}
-.iconOne {
   background: url(../img/icons/dog-icon.png) no-repeat;
 }
+
 .iconTwo {
   background: url(../img/icons/girl-icon.png) no-repeat;
 }
 .iconThree {
   background: url(../img/icons/guy-icon.png) no-repeat;
 }
-.circle {
-  position: relative;
-  border-radius: 50%;
-  background: white; 
-  background-position: center;
-  width: 97px;
-  height: 97px;
-  z-index: 0;
-  margin: 0 10px;
-}
-.circle:hover {
-  width: 97px;
-  height: 97px;
-  background: white;
-}
-
 // END OF HOMEPAGE-SLIDE STYLING
 // ABOUTPAGE-SLIDER STYLING
 #about-slide h1 {
@@ -442,13 +429,13 @@ nav {
 }
 
 .top1 {
-  margin-top: 200px !important;
+  margin-top: 200px;
 }
 .top2 {
-  margin-top: 100px !important;
+  margin-top: 100px;
 }
 .top3 {
-  margin-top: 50px !important;
+  margin-top: 50px;
 }
 
 form-horizontal {
@@ -460,7 +447,6 @@ form-horizontal {
   height: 40px;
   width: 100%;
   background: #cacaca;
-  @include opacity(1);
 }
   
 ul.sub {
@@ -478,8 +464,6 @@ ul.sub {
     }
     ul.sub li a.activeSlide {
       color: $green-color;
-      font-size: 16px;
-      text-shadow: 1px 1px #515151; 
     }
 ul.slider {
   overflow: hidden;
@@ -517,6 +501,5 @@ ul.slider li.slide {
 .carousel-linked-nav li.active {
   background: url(../img/navDots.png) -25px 0 no-repeat;
 }
-
 
 

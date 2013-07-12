@@ -3,15 +3,14 @@
         pageState = 'exterior';
         resizeDiv();
         hideSlides();
+        
         mainNavControl();
         activeFunc();
         satoriSlider();
         carouselLinks();
         carouselSlide();
         //SlidenavUp();
-
-        // invoke the carousel
-        $('.carousel').carousel('pause');
+        
         $("#home-exterior").show();
         window.onresize = function(event) {
           resizeDiv();
