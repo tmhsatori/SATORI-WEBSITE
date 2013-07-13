@@ -4867,6 +4867,8 @@ a.badge:hover {
   position: absolute;
   top: 0;
   width: 100%;
+  outline: none;
+  border: none;
 }
 
 .carousel .next {
@@ -4904,6 +4906,8 @@ a.badge:hover {
   text-indent: -5000px;
   text-align: center;
   background: url(../img/leftright-arrows.png) no-repeat right;
+  outline: none;
+  border: none;
 }
 
 .carousel-control.right {

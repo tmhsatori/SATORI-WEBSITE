@@ -1,22 +1,26 @@
  // Fix pages to fit the viewport at all times
+ var pageState;
       $(function() {
         pageState = 'exterior';
         resizeDiv();
         hideSlides();
-        
+        //showSubNav();
         mainNavControl();
         activeFunc();
         satoriSlider();
         carouselLinks();
         carouselSlide();
         //SlidenavUp();
-        
+        $('.subnav').hide();
+        $('.subnav').css({'height': "0px"});
         $("#home-exterior").show();
         window.onresize = function(event) {
           resizeDiv();
         };
+        
+
       });
-  
+
       function hideSlides() {
         $("#home-interior, #about-interior, #solutions-interior, #approach-interior, #contact-interior, #home-exterior, #about-exterior, #solutions-exterior, #approach-exterior, #contact-exterior").hide();
       }
@@ -36,9 +40,13 @@
         nbh = navBarHeight;
         $('#exterior-page, #interior-page').css({'height': vph + 'px'});
         ih = (vph-nbh);
-        $('#interior-page').css({'height': vph + 'px'});
-        $('#interior-page').css({'bottom': -ih + 'px'});
+        if(pageState == 'exterior') {
+          $('#interior-page').css({'height': vph + 'px'});
+          $('#interior-page').css({'bottom': -ih + 'px'});
+        }
       }
+
+
 
       //MAIN NAVIGATION FUNCTIONING.
       function mainNavControl() {
@@ -62,13 +70,15 @@
                 hideExteriorSlides();
                 $(iSlide).fadeOut();
                 $(Slide).fadeIn();
+                $(".subnav").delay(100).fadeOut();
+                $('.subnav').delay(100).css({'height': "0px"});
                 $('#interior-page').stop().animate({'bottom': -ih + 'px'}, 1500, 'easeOutQuint');
                 pageState = 'exterior';
               }
               else if(pageState == 'interior') {
                 hideInteriorSlides();
                 $(iSlide).fadeIn();
-                pageState == 'interior';
+                pageState == 'exterior';
               }
               else if(pageState == 'exterior' & id == 'home' ) {
                 e.preventDefault();
@@ -77,9 +87,14 @@
                 hideInteriorSlides();
                 $(iSlide).fadeIn();
                 $('#interior-page').stop().animate({'bottom': '0px'}, 500, 'easeInQuad');
+                $(".subnav").delay(100).fadeIn();
+                $('.subnav').delay(100).animate({'height': "40px"}, 500, 'easeInQuad');
                 pageState = 'interior';
               }  
-            }                
+            }
+            else {
+              alert("clicked on");
+            }               
           });
         }
       // SLIDE THE NAV UP TO THE APPROPRIATE SLIDE WITH ANY OBJECT THAT HAS THE CLASS 'more'
@@ -115,6 +130,7 @@
           i = vpw*2;
         $("ul.slider li").css({'margin-left': i + 'px'})
         $("ul.slider li:first").css({'margin-left': '0px'}).show();
+        
         $("ul.sub li").unbind('click').click(function(e) {
           vph = $(window).height();
           navBar = $("nav");
@@ -156,9 +172,6 @@
           $('.carousel-linked-nav li:eq(' + idx + ')').addClass('active');
         });
       }
-
-
-
 
 
 
