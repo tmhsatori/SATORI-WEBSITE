@@ -659,41 +659,43 @@ form-horizontal {
   height: 40px;
   overflow: hidden;
   width: 100%;
-  background: #cacaca;
+  background: #222;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
 }
 
-/* line 461, ../sass/screen.scss */
+/* line 462, ../sass/screen.scss */
 ul.sub {
   width: 100%;
   position: relative;
 }
 
-/* line 465, ../sass/screen.scss */
+/* line 466, ../sass/screen.scss */
 ul.sub li {
   float: left;
   margin: 10px 4em 10px;
 }
 
-/* line 469, ../sass/screen.scss */
+/* line 470, ../sass/screen.scss */
 ul.sub li a {
-  color: #222;
+  color: #fff;
   font-size: 14px;
   text-decoration: none;
 }
 
-/* line 474, ../sass/screen.scss */
+/* line 475, ../sass/screen.scss */
 ul.sub li a.activeSlide {
   color: #00cc7a;
 }
 
-/* line 477, ../sass/screen.scss */
+/* line 478, ../sass/screen.scss */
 ul.slider {
   overflow: hidden;
   width: 100%;
   height: 100%;
 }
 
-/* line 482, ../sass/screen.scss */
+/* line 483, ../sass/screen.scss */
 ul.slider li.slide {
   position: relative;
   width: 100%;
@@ -702,7 +704,7 @@ ul.slider li.slide {
   float: left;
 }
 
-/* line 491, ../sass/screen.scss */
+/* line 492, ../sass/screen.scss */
 .carousel-linked-nav {
   width: 100%;
   height: 50px;
@@ -715,12 +717,12 @@ ul.slider li.slide {
   border: none;
 }
 
-/* line 502, ../sass/screen.scss */
+/* line 503, ../sass/screen.scss */
 .carousel-linked-nav li {
   float: left;
 }
 
-/* line 506, ../sass/screen.scss */
+/* line 507, ../sass/screen.scss */
 .carousel-linked-nav li a {
   outline: none;
   border: none;
@@ -730,7 +732,7 @@ ul.slider li.slide {
   background: url(../img/navDots.png) 0 0 no-repeat;
 }
 
-/* line 514, ../sass/screen.scss */
+/* line 515, ../sass/screen.scss */
 .carousel-linked-nav li.active {
   background: url(../img/navDots.png) -25px 0 no-repeat;
 }

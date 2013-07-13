@@ -455,7 +455,8 @@ form-horizontal {
   height: 40px;
   overflow: hidden;
   width: 100%;
-  background: #cacaca;
+  background: #222;
+   @include opacity(0.5);
 }
   
 ul.sub {
@@ -467,7 +468,7 @@ ul.sub {
     margin:10px 4em 10px;
   }
     ul.sub li a {
-      color: #222;
+      color: #fff;
       font-size: 14px;
       text-decoration: none;
     }

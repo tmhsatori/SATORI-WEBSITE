@@ -130,8 +130,20 @@
           i = vpw*2;
         $("ul.slider li").css({'margin-left': i + 'px'})
         $("ul.slider li:first").css({'margin-left': '0px'}).show();
-        
+        $("ul.sub li a:first").addClass('activeSlide');
+
         $("ul.sub li").unbind('click').click(function(e) {
+           h = $(this).find("a");
+          if(h.hasClass('activeSlide')) {
+            e.stopPropagation();
+          }
+          else{
+
+          k = $(this).attr('class');
+          //alert(k);
+          q = $('ul.slider li.' + k );
+          $("ul.slider li").removeClass('active');
+          q.addClass('active');
           vph = $(window).height();
           navBar = $("nav");
           navBarHeight = navBar.css('height').replace('px','');
@@ -143,6 +155,7 @@
           e.preventDefault();
           $("ul.sub li a").removeClass('activeSlide');
           $(this).find("a").addClass('activeSlide');
+          
           b = $(this).attr('class');
           activeSlide =  $('ul.slider li' + '.' + b);
           containerWidth = $("ul.slider").css('width');
@@ -152,6 +165,7 @@
           $("ul.slider li").fadeOut();
           $(activeSlide).fadeIn('slow');
           $(activeSlide).animate({'margin-left': '0px'}, 300, 'easeOutQuint');
+        }
         });
       }
 
