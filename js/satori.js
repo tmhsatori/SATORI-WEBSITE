@@ -15,6 +15,12 @@
         window.onresize = function(event) {
           resizeDiv();
         };
+
+        var activeItem = Array($("#project05 ol.carousel-inner li"));
+
+        console.log(activeItem);
+
+
       });
 
       function hideSlides() {
@@ -29,13 +35,14 @@
 
       //GRABS THE CURRENT DIMENSIONS OF THE BROWSERS VIEWPORT AND UPDATES THE CSS TO FIT THE CURRENT WIDTH AND HEIGHT
       function resizeDiv() {
-        vpw = $(window).width();
-        vph = $(window).height();
-        navBar = $("nav");
-        navBarHeight = navBar.css('height').replace('px','');
-        nbh = navBarHeight;
-        $('#exterior-page, #interior-page').css({'height': vph + 'px'});
+        var vpw = $(window).width();
+        var vph = $(window).height();
+        var navBar = $("nav");
+        var navBarHeight = navBar.css('height').replace('px','');
+        var nbh = navBarHeight;
         ih = (vph-nbh);
+        $('#exterior-page, #interior-page').css({'height': vph + 'px'});
+        
         if(pageState == 'exterior') {
           $('#interior-page').css({'height': vph + 'px'});
           $('#interior-page').css({'bottom': -ih + 'px'});
@@ -60,7 +67,7 @@
           }
           var k = $("Slide").css('bottom');
           var bottom = $("#interior-page").css('bottom').replace('px','');
-          g = bottom;
+          var g = bottom;
             if(!(id == 'twitter' || id == 'facebook')) {
               if(pageState == 'interior' & id == 'home' ) {
                 hideExteriorSlides();
@@ -168,34 +175,7 @@
       function carouselLinks() {
         $('.carousel-linked-nav > li > a').click(function() {
             var item = Number($(this).attr('href').substring(1));
-            if(item == 1) {
-              // alert("home page");
-               $("#main-nav li").removeClass();
-               $("#main-nav li").addClass('home-color');
-               $("#main-nav").removeClass();
-               $("#main-nav").addClass('home-color');
-            }
-            else if(item == 2) {
-               // alert("about page");
-               $("#main-nav li").removeClass();
-               $("#main-nav li").addClass('about-color');
-               $("#main-nav").removeClass();
-               $("#main-nav").addClass('about-color');
-            }
-            else if(item == 3) {
-               // alert("solutions page");
-               $("#main-nav li").removeClass();
-               $("#main-nav li").addClass('solutions-color');
-               $("#main-nav").removeClass();
-               $("#main-nav").addClass('solutions-color');
-            }
-            else if(item == 4) {
-               // alert("approach page");
-               $("#main-nav li").removeClass();
-               $("#main-nav li").addClass('approach-color');
-               $("#main-nav").removeClass();
-               $("#main-nav").addClass('approach-color');
-            }
+            
             $('.carousel').carousel(item - 1);
             $('.carousel-linked-nav .active').removeClass('active');
             $(this).parent().addClass('active');
@@ -208,6 +188,26 @@
           $('.carousel-linked-nav .active').removeClass('active');
           var idx = $('.carousel .item.active').index();
           $('.carousel-linked-nav li:eq(' + idx + ')').addClass('active');
+          if(idx == 0) {
+              // alert("home page");
+              $("#main-nav").removeClass();
+              $("#main-nav").addClass('home-color');
+            }
+            else if(idx == 1) {
+               // alert("about page");
+               $("#main-nav").removeClass();
+               $("#main-nav").addClass('about-color');
+            }
+            else if(idx == 2) {
+               // alert("solutions page");
+               $("#main-nav").removeClass();
+               $("#main-nav").addClass('solutions-color');
+            }
+            else if(idx == 3) {
+               // alert("approach page");
+               $("#main-nav").removeClass();
+               $("#main-nav").addClass('approach-color');
+            }
         });
       }
 
