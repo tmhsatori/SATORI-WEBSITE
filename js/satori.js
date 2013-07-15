@@ -15,12 +15,6 @@
         window.onresize = function(event) {
           resizeDiv();
         };
-
-        var activeItem = Array($("#project05 ol.carousel-inner li"));
-
-        console.log(activeItem);
-
-
       });
 
       function hideSlides() {
@@ -62,8 +56,8 @@
           var slideColor = (id + '-color');
           if(!(id == 'twitter' || id == 'facebook')) {
             $("#main-nav li#home, #main-nav li#about, #main-nav li#solutions, #main-nav li#approach, #main-nav li#contact, #main-nav").removeClass();
-            $("#main-nav").addClass(slideColor);
             $(this).addClass('active');
+            $("#main-nav").addClass(slideColor);
           }
           var k = $("Slide").css('bottom');
           var bottom = $("#interior-page").css('bottom').replace('px','');
@@ -173,22 +167,22 @@
       }
 
       function carouselLinks() {
-        $('.carousel-linked-nav > li > a').click(function() {
+        $('#exterior-page .carousel-linked-nav > li > a').click(function() {
             var item = Number($(this).attr('href').substring(1));
             
-            $('.carousel').carousel(item - 1);
-            $('.carousel-linked-nav .active').removeClass('active');
+            $('#exterior-page .carousel').carousel(item - 1);
+            $('#exterior-page .carousel-linked-nav .active').removeClass('active');
             $(this).parent().addClass('active');
             return false;
         });
       }
 
       function carouselSlide() {
-        $('.carousel').bind('slid', function() {
+        $('#exterior-page .carousel').bind('slid', function() {
           $('.carousel-linked-nav .active').removeClass('active');
           var idx = $('.carousel .item.active').index();
           $('.carousel-linked-nav li:eq(' + idx + ')').addClass('active');
-          if(idx == 0) {
+          if(idx === 0) {
               // alert("home page");
               $("#main-nav").removeClass();
               $("#main-nav").addClass('home-color');
