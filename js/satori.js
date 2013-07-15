@@ -9,44 +9,12 @@
         satoriSlider();
         carouselLinks();
         carouselSlide();
-        moneyMan();
         $('.subnav').hide();
         $('.subnav').css({'height': "0px"});
         $("#home-exterior").show();
         window.onresize = function(event) {
           resizeDiv();
         };
-        // var activeSlide = $("#project05 ol.carousel-inner li");
-        // activeSlide.each(function() {
-        //   console.log('jack!');
-        // });
-        // $('#project05 ol.carousel-inner').find("li").click(function(e){
-        //   var slideItem = $(this);
-        //  if(slideItem.is('active')) {
-        //   //alert("ABOUT");
-        //   if(slideItem.hasClass('about')) {
-        //     alert("ABOUT");
-        //   }
-        //  }
-        //  else {
-        //   return false;
-        //  }
-        // });
-
-      // var selected = $('#project05 ol.carousel-inner li.active').index();
-      // if(selected == 1) {
-      //   alert('about');
-      // }
-        function moneyMan() {
-        var $activeItem = $("#project05 ol.carousel-inner li");
-        $.each($activeItem, function(key, value) {
-            if ($(value).is('.active')) {
-              alert ('Slide ' + key + ' is selected');
-            }
-        });
-      }
-
-
       });
 
       function hideSlides() {
@@ -61,13 +29,13 @@
 
       //GRABS THE CURRENT DIMENSIONS OF THE BROWSERS VIEWPORT AND UPDATES THE CSS TO FIT THE CURRENT WIDTH AND HEIGHT
       function resizeDiv() {
-        var vpw = $(window).width();
-        var vph = $(window).height();
-        var navBar = $("nav");
-        var navBarHeight = navBar.css('height').replace('px','');
-        var nbh = navBarHeight;
+        vpw = $(window).width();
+        vph = $(window).height();
+        navBar = $("nav");
+        navBarHeight = navBar.css('height').replace('px','');
+        nbh = navBarHeight;
         $('#exterior-page, #interior-page').css({'height': vph + 'px'});
-        var ih = (vph-nbh);
+        ih = (vph-nbh);
         if(pageState == 'exterior') {
           $('#interior-page').css({'height': vph + 'px'});
           $('#interior-page').css({'bottom': -ih + 'px'});
@@ -154,8 +122,8 @@
       // SATORI CUSTOM SLIDER FOR THE INTERIOR SUBNAV NAVIGATION     
       function satoriSlider() {
         $("ul.slider li").hide();
-          var vpw = $(window).width();
-          var i = vpw*2;
+          vpw = $(window).width();
+          i = vpw*2;
         $("ul.slider li").css({'margin-left': i + 'px'})
         $("ul.slider li:first").css({'margin-left': '0px'}).show();
         $("ul.sub li a:first").addClass('activeSlide');
@@ -172,22 +140,22 @@
           q = $('ul.slider li.' + k );
           $("ul.slider li").removeClass('active');
           q.addClass('active');
-          var vph = $(window).height();
-          var navBar = $("nav");
-          var navBarHeight = navBar.css('height').replace('px','');
-          var subBar = $(".subnav").css('height').replace('px','');
-          var sb = subBar;
-          var nbh = navBarHeight;
-          var j = vph-nbh-sb;
-          var i = vpw*2;
+          vph = $(window).height();
+          navBar = $("nav");
+          navBarHeight = navBar.css('height').replace('px','');
+          subBar = $(".subnav").css('height').replace('px','');
+          sb = subBar;
+          nbh = navBarHeight;
+          j = vph-nbh-sb;
+          i = vpw*2;
           e.preventDefault();
           $("ul.sub li a").removeClass('activeSlide');
           $(this).find("a").addClass('activeSlide');
           
-          var b = $(this).attr('class');
-          var activeSlide =  $('ul.slider li' + '.' + b);
-          var containerWidth = $("ul.slider").css('width');
-          var slideWidth = $("ul.slider li").css({'width': containerWidth});
+          b = $(this).attr('class');
+          activeSlide =  $('ul.slider li' + '.' + b);
+          containerWidth = $("ul.slider").css('width');
+          slideWidth = $("ul.slider li").css({'width': containerWidth});
           $("ul.slider li").css({'height': j + 'px'});
           $("ul.slider li").animate({'margin-left': i + 'px'}, 500, 'easeInQuint');
           $("ul.slider li").fadeOut();
@@ -200,6 +168,34 @@
       function carouselLinks() {
         $('.carousel-linked-nav > li > a').click(function() {
             var item = Number($(this).attr('href').substring(1));
+            if(item == 1) {
+              // alert("home page");
+               $("#main-nav li").removeClass();
+               $("#main-nav li").addClass('home-color');
+               $("#main-nav").removeClass();
+               $("#main-nav").addClass('home-color');
+            }
+            else if(item == 2) {
+               // alert("about page");
+               $("#main-nav li").removeClass();
+               $("#main-nav li").addClass('about-color');
+               $("#main-nav").removeClass();
+               $("#main-nav").addClass('about-color');
+            }
+            else if(item == 3) {
+               // alert("solutions page");
+               $("#main-nav li").removeClass();
+               $("#main-nav li").addClass('solutions-color');
+               $("#main-nav").removeClass();
+               $("#main-nav").addClass('solutions-color');
+            }
+            else if(item == 4) {
+               // alert("approach page");
+               $("#main-nav li").removeClass();
+               $("#main-nav li").addClass('approach-color');
+               $("#main-nav").removeClass();
+               $("#main-nav").addClass('approach-color');
+            }
             $('.carousel').carousel(item - 1);
             $('.carousel-linked-nav .active').removeClass('active');
             $(this).parent().addClass('active');
