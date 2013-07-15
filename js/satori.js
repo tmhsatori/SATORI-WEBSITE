@@ -4,20 +4,48 @@
         pageState = 'exterior';
         resizeDiv();
         hideSlides();
-        //showSubNav();
         mainNavControl();
         activeFunc();
         satoriSlider();
         carouselLinks();
         carouselSlide();
-        //SlidenavUp();
+        moneyMan();
         $('.subnav').hide();
         $('.subnav').css({'height': "0px"});
         $("#home-exterior").show();
         window.onresize = function(event) {
           resizeDiv();
         };
-        
+        // var activeSlide = $("#project05 ol.carousel-inner li");
+        // activeSlide.each(function() {
+        //   console.log('jack!');
+        // });
+        // $('#project05 ol.carousel-inner').find("li").click(function(e){
+        //   var slideItem = $(this);
+        //  if(slideItem.is('active')) {
+        //   //alert("ABOUT");
+        //   if(slideItem.hasClass('about')) {
+        //     alert("ABOUT");
+        //   }
+        //  }
+        //  else {
+        //   return false;
+        //  }
+        // });
+
+      // var selected = $('#project05 ol.carousel-inner li.active').index();
+      // if(selected == 1) {
+      //   alert('about');
+      // }
+        function moneyMan() {
+        var $activeItem = $("#project05 ol.carousel-inner li");
+        $.each($activeItem, function(key, value) {
+            if ($(value).is('.active')) {
+              alert ('Slide ' + key + ' is selected');
+            }
+        });
+      }
+
 
       });
 
@@ -33,13 +61,13 @@
 
       //GRABS THE CURRENT DIMENSIONS OF THE BROWSERS VIEWPORT AND UPDATES THE CSS TO FIT THE CURRENT WIDTH AND HEIGHT
       function resizeDiv() {
-        vpw = $(window).width();
-        vph = $(window).height();
-        navBar = $("nav");
-        navBarHeight = navBar.css('height').replace('px','');
-        nbh = navBarHeight;
+        var vpw = $(window).width();
+        var vph = $(window).height();
+        var navBar = $("nav");
+        var navBarHeight = navBar.css('height').replace('px','');
+        var nbh = navBarHeight;
         $('#exterior-page, #interior-page').css({'height': vph + 'px'});
-        ih = (vph-nbh);
+        var ih = (vph-nbh);
         if(pageState == 'exterior') {
           $('#interior-page').css({'height': vph + 'px'});
           $('#interior-page').css({'bottom': -ih + 'px'});
@@ -126,15 +154,15 @@
       // SATORI CUSTOM SLIDER FOR THE INTERIOR SUBNAV NAVIGATION     
       function satoriSlider() {
         $("ul.slider li").hide();
-          vpw = $(window).width();
-          i = vpw*2;
+          var vpw = $(window).width();
+          var i = vpw*2;
         $("ul.slider li").css({'margin-left': i + 'px'})
         $("ul.slider li:first").css({'margin-left': '0px'}).show();
         $("ul.sub li a:first").addClass('activeSlide');
 
         $("ul.sub li").unbind('click').click(function(e) {
-           h = $(this).find("a");
-          if(h.hasClass('activeSlide')) {
+           activeLink = $(this).find("a");
+          if(activeLink.hasClass('activeSlide')) {
             e.stopPropagation();
           }
           else{
@@ -144,22 +172,22 @@
           q = $('ul.slider li.' + k );
           $("ul.slider li").removeClass('active');
           q.addClass('active');
-          vph = $(window).height();
-          navBar = $("nav");
-          navBarHeight = navBar.css('height').replace('px','');
-          subBar = $(".subnav").css('height').replace('px','');
-          sb = subBar;
-          nbh = navBarHeight;
-          j = vph-nbh-sb;
-          i = vpw*2;
+          var vph = $(window).height();
+          var navBar = $("nav");
+          var navBarHeight = navBar.css('height').replace('px','');
+          var subBar = $(".subnav").css('height').replace('px','');
+          var sb = subBar;
+          var nbh = navBarHeight;
+          var j = vph-nbh-sb;
+          var i = vpw*2;
           e.preventDefault();
           $("ul.sub li a").removeClass('activeSlide');
           $(this).find("a").addClass('activeSlide');
           
-          b = $(this).attr('class');
-          activeSlide =  $('ul.slider li' + '.' + b);
-          containerWidth = $("ul.slider").css('width');
-          slideWidth = $("ul.slider li").css({'width': containerWidth});
+          var b = $(this).attr('class');
+          var activeSlide =  $('ul.slider li' + '.' + b);
+          var containerWidth = $("ul.slider").css('width');
+          var slideWidth = $("ul.slider li").css({'width': containerWidth});
           $("ul.slider li").css({'height': j + 'px'});
           $("ul.slider li").animate({'margin-left': i + 'px'}, 500, 'easeInQuint');
           $("ul.slider li").fadeOut();
