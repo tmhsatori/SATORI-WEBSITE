@@ -7,6 +7,7 @@
         mainNavControl();
         activeFunc();
         satoriSlider();
+        slideHome();
         carouselLinks();
         carouselSlide();
         $('.subnav').hide();
@@ -108,6 +109,7 @@
           pageState = 'interior';
         });
       }
+
       // ADDING THE ACTIVE STATE TO THE NAVIGATION
       function activeFunc() {
 
@@ -170,10 +172,20 @@
         });
       }
 
+      //SATORI LOGO FUNCTION
+      function slideHome() {
+        var i = 0; //index of the panel    
+        var idx = $('#exterior-page .carousel .item.active').index();
+        $('a#satori-logo').on('click', function() {
+        $('#exterior-page .carousel-linked-nav .active').removeClass('active');
+        $('#project05').carousel(i);
+        $('#exterior-page .carousel-linked-nav li:eq(' + idx + ')').addClass('active');
+        });
+      }
+
       function carouselLinks() {
         $('#exterior-page .carousel-linked-nav > li > a').click(function() {
             var item = Number($(this).attr('href').substring(1));
-            
             $('#exterior-page .carousel').carousel(item - 1);
             $('#exterior-page .carousel-linked-nav .active').removeClass('active');
             $(this).parent().addClass('active');
@@ -183,25 +195,25 @@
 
       function carouselSlide() {
         $('#exterior-page .carousel').bind('slid', function() {
-          $('.carousel-linked-nav .active').removeClass('active');
+          $('#exterior-page.carousel-linked-nav .active').removeClass('active');
           var idx = $('#exterior-page .carousel .item.active').index();
-          $('.carousel-linked-nav li:eq(' + idx + ')').addClass('active');
+          $('#exterior-page .carousel-linked-nav li:eq(' + idx + ')').addClass('active');
           if(idx === 0) {
               // alert("home page");
               $("#main-nav").removeClass();
               $("#main-nav").addClass('home-color');
             }
-            else if(idx == 1) {
+            else if(idx === 1) {
                // alert("about page");
                $("#main-nav").removeClass();
                $("#main-nav").addClass('about-color');
             }
-            else if(idx == 2) {
+            else if(idx === 2) {
                // alert("solutions page");
                $("#main-nav").removeClass();
                $("#main-nav").addClass('solutions-color');
             }
-            else if(idx == 3) {
+            else if(idx === 3) {
                // alert("approach page");
                $("#main-nav").removeClass();
                $("#main-nav").addClass('approach-color');
