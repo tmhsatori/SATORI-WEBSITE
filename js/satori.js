@@ -64,11 +64,7 @@
           var bottom = $("#interior-page").css('bottom').replace('px','');
           var g = bottom;
             if(!(id == 'twitter' || id == 'facebook')) {
-              if(pageState == 'interior' & id == 'home' ) {
-                var idx = $('#exterior-page .carousel .item.active').index();
-                idx === 0;
-                alert(idx);
-                
+              if(pageState == 'interior' & id == 'home' ) {                
                 hideExteriorSlides();
                 $(iSlide).fadeOut();
                 $(Slide).fadeIn();
