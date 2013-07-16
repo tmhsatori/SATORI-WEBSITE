@@ -64,6 +64,10 @@
           var g = bottom;
             if(!(id == 'twitter' || id == 'facebook')) {
               if(pageState == 'interior' & id == 'home' ) {
+                var idx = $('#exterior-page .carousel .item.active').index();
+                idx === 0;
+                alert(idx);
+                
                 hideExteriorSlides();
                 $(iSlide).fadeOut();
                 $(Slide).fadeIn();
@@ -180,7 +184,7 @@
       function carouselSlide() {
         $('#exterior-page .carousel').bind('slid', function() {
           $('.carousel-linked-nav .active').removeClass('active');
-          var idx = $('.carousel .item.active').index();
+          var idx = $('#exterior-page .carousel .item.active').index();
           $('.carousel-linked-nav li:eq(' + idx + ')').addClass('active');
           if(idx === 0) {
               // alert("home page");
