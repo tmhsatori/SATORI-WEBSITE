@@ -108,7 +108,6 @@
 
       // ADDING THE ACTIVE STATE TO THE NAVIGATION
       function activeFunc() {
-
         $('#main-nav li a').unbind('click').click(function(event){
           var sid = $(this).attr('id');
           if((pageState == 'exterior') & ($(this).hasClass('active')) ) {
