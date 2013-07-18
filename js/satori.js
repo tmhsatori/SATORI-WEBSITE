@@ -18,6 +18,7 @@
         window.onresize = function(event) {
           resizeDiv();
         };
+        
       });
 
       function hideSlides() {
@@ -233,44 +234,63 @@ function carouselLinksApproach() {
       }
 
 function carouselSlideApproach() {
-        $('#approach-interior .carousel').bind('slid', function() {
+          var lamps = $('.lamp1, .lamp2, .lamp3, .lamp4');
+          var lampSmall = $('.lampSmall1, .lampSmall2, .lampSmall3, .lampSmall4');
+          var lampBig = $('.lampBig1, .lampBig2, .lampBig3, .lampBig4');
+          lampBig.hide();
+          var fl = $('.lamp1');
+          fl.css({'top': '60px', 'opacity': '1'});
+          $('.lampSmall1').hide();
+          $('.lampBig1').show();
+
+          $('#approach-interior .carousel').bind('slid', function() {
           $('#approach-interior .carousel-linked-nav .active').removeClass('active');
           var idx = $('#approach-interior .carousel .item.active').index();
           $('#approach-interior .carousel-linked-nav li:eq(' + idx + ')').addClass('active');
-          var lamps = $('.lamp1, .lamp2, .lamp3, .lamp4');
+          
           if(idx === 0) {
-              //alert("home page");
               $('#approach-interior .carousel-linked-nav li:eq(' + idx + ')').addClass('active');
-              lamps.animate({'top': '0', 'width': '138px', 'opacity': '.5'}, 900, 'easeOutQuint');
-              lamps.css({'background-position': 'left'});
-              $('.lamp1').css({'background-position': 'right'});
-              $('.lamp1').animate({'top': '60px', 'width': '282px', 'height': '350px', 'opacity': '1'}, 500, 'easeOutQuint');
-
+              lamps.animate({'top': '0', 'width': '300px'}, 900, 'linear');
+              lamps.css({'opacity': '.4'});
+              $('.lamp1').animate({'width': '282px', 'height': '350px'}, 100, 'linear');
+              $('.lamp1').css({'opacity': '1'}, 100, 'linear');
+              lampSmall.fadeIn();
+              lampBig.hide();
+              $('.lampSmall1').fadeOut();
+              $('.lampBig1').fadeIn('fast');
             }
             else if(idx === 1) {
-              //alert("about page");
               $('#approach-interior .carousel-linked-nav li:eq(' + idx + ')').addClass('active');
-              lamps.animate({'top': '0', 'width': '138px', 'opacity': '.5'}, 900, 'easeOutQuint');
-              lamps.css({'background-position': 'left'});
-              $('.lamp2').css({'background-position': 'right'});
-              $('.lamp2').animate({'top': '60px', 'width': '282px', 'height': '350px', 'opacity': '1'}, 500, 'easeOutQuint');
+              lamps.animate({'top': '0', 'width': '300px'}, 900, 'linear');
+              lamps.css({'opacity': '.4'});
+              $('.lamp2').animate({'width': '282px', 'height': '350px'}, 100, 'linear');
+              $('.lamp2').css({'opacity': '1'}, 100, 'linear');
+              lampSmall.fadeIn();
+              lampBig.hide();
+              $('.lampSmall2').fadeOut();
+              $('.lampBig2').fadeIn('fast');
             }
             else if(idx === 2) {
-              //alert("solutions page");
               $('#approach-interior .carousel-linked-nav li:eq(' + idx + ')').addClass('active');
-              lamps.animate({'top': '0', 'width': '138px', 'opacity': '.5'}, 900, 'easeOutQuint');
-              lamps.css({'background-position': 'left'});
-              $('.lamp3').css({'background-position': 'right'});
-              $('.lamp3').animate({'top': '60px', 'width': '282px', 'height': '350px', 'opacity': '1'}, 500, 'easeOutQuint');
-
+              lamps.animate({'top': '0', 'width': '300px'}, 900, 'linear');
+              lamps.css({'opacity': '.4'});
+              $('.lamp3').animate({'width': '282px', 'height': '350px'}, 100, 'linear');
+              $('.lamp3').css({'opacity': '1'}, 100, 'linear');
+              lampSmall.fadeIn();
+              lampBig.hide();
+              $('.lampSmall3').fadeOut();
+              $('.lampBig3').fadeIn('fast');
             }
             else if(idx === 3) {
-              //alert("approach page");
               $('#approach-interior .carousel-linked-nav li:eq(' + idx + ')').addClass('active');
-              lamps.animate({'top': '0', 'width': '138px', 'opacity': '.5'}, 900, 'easeOutQuint');
-              lamps.css({'background-position': 'left'});
-              $('.lamp4').css({'background-position': 'right'});
-              $('.lamp4').animate({'top': '60px', 'width': '282px', 'height': '350px', 'opacity': '1'}, 500, 'easeOutQuint');
+              lamps.animate({'top': '0', 'width': '300px'}, 900, 'linear');
+              lamps.css({'opacity': '.4'});
+              $('.lamp4').animate({'width': '282px', 'height': '350px'}, 100, 'linear');
+              $('.lamp4').css({'opacity': '1'}, 100, 'linear');
+              lampSmall.fadeIn();
+              lampBig.hide();
+              $('.lampSmall4').fadeOut();
+              $('.lampBig4').fadeIn('fast');
             }
         });
       }

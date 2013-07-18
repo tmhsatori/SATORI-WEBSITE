@@ -532,7 +532,6 @@ ul.slider li.slide {
 }
 .approachSlide .bigFont {
   width: 30%;
-  height: 200px;
   padding: 10px;
   margin-left: 10px;
 }
@@ -555,44 +554,104 @@ ul.slider li.slide {
   opacity: .7;
 }
 .lamp1, .lamp2, .lamp3, .lamp4 {
-  @include opacity(.6);
+  @include opacity(.4);
 }
 .lamp1 {
   position: absolute;
   z-index: 15;
-  background: url(../img/lamp/lamp1.png) top left no-repeat;
-  width: 250px;
-  height: 220px;
+  width: 300px;
+  height: 350px;
   top: 0;
   left: 0;
 }
+  .lampSmall1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/lamp/lamp1.png) top left no-repeat;
+    width: 200px;
+    height: 293px;
+  }
+  .lampBig1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/lamp/lamp1.png) top right no-repeat;
+    width: 265px;
+    height: 293px;
+  }
 .lamp2 {
   position: absolute;
   z-index: 15;
-  background: url(../img/lamp/lamp2.png) top left no-repeat;
-  width: 250px;
-  height: 220px;
+  width: 300px;
+  height: 350px;
   top: 0;
   left: 200px;
 }
+  .lampSmall2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/lamp/lamp2.png) top left no-repeat;
+    width: 200px;
+    height: 293px;
+  }
+  .lampBig2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/lamp/lamp2.png) top right no-repeat;
+    width: 265px;
+    height: 293px;
+  }
 .lamp3 {
   position: absolute;
   z-index: 15;
-  background: url(../img/lamp/lamp3.png) top left no-repeat;
-  width: 250px;
-  height: 220px;
+  width: 300px;
+  height: 350px;
   top: 0;
   left: 400px;
 }
+  .lampSmall3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/lamp/lamp3.png) top left no-repeat;
+    width: 200px;
+    height: 293px;
+  }
+  .lampBig3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/lamp/lamp3.png) top right no-repeat;
+    width: 265px;
+    height: 293px;
+  }
 .lamp4 {
   position: absolute;
   z-index: 15;
- background: url(../img/lamp/lamp4.png) top left no-repeat;
-  width: 250px;
-  height: 220px;
+  width: 300px;
+  height: 350px;
   top: 0;
   left: 600px;
 }
+  .lampSmall4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/lamp/lamp4.png) top left no-repeat;
+    width: 200px;
+    height: 293px;
+  }
+  .lampBig4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/lamp/lamp4.png) top right no-repeat;
+    width: 265px;
+    height: 293px;
+  }
 // END OF APPROACH STYLING
 
 .formWrapper {
