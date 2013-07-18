@@ -527,31 +527,36 @@ ul.slider li.slide {
 //   min-height: 250px;
 // }
 #approachSlide .carousel-inner {
-  width: 60%;
+  width: 900px;
   margin: 0 auto;
 }
+.approachSlide {
+  width: 100%;
+}
 .approachSlide .bigFont {
-  width: 30%;
+  width: 250px;
+  float: left;
   padding: 10px;
   margin-left: 10px;
 }
 .approachSlide .bigFont h1 {
   font-family: Homestead-Display;
-  font-size: 3em;
+  font-size: 2.8em;
   color: $pink-color;
+  text-align: center;
 }
 .approachSlide p {
-  width: 65%;
+  width: 600px;
+  float: left;
   padding: 10px;
 }
 // END OF APPROACH SLIDE STYLING FOR CAROUSEL
 // APPROACH STYLING
 #approachBox {
   position: relative;
-  width: 41%;
+  width: 800px;
   margin: 0 auto;
   background: #ccc;
-  opacity: .7;
 }
 .lamp1, .lamp2, .lamp3, .lamp4 {
   @include opacity(.4);
