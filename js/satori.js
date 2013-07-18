@@ -18,7 +18,6 @@
         window.onresize = function(event) {
           resizeDiv();
         };
-        
       });
 
       function hideSlides() {
@@ -40,7 +39,7 @@
         var nbh = navBarHeight;
         ih = (vph-nbh);
         $('#exterior-page, #interior-page').css({'height': vph + 'px'});
-        
+
         if(pageState == 'exterior') {
           $('#interior-page').css({'height': vph + 'px'});
           $('#interior-page').css({'bottom': -ih + 'px'});
@@ -222,7 +221,7 @@
             }
         });
       }
-
+//CAROUSEL SLIDER CLICK EVENT FOR THE APPROACH PAGE
 function carouselLinksApproach() {
         $('#approach-interior .carousel-linked-nav > li > a').click(function() {
             var item = Number($(this).attr('href').substring(1));
@@ -232,13 +231,13 @@ function carouselLinksApproach() {
             return false;
         });
       }
-
+//CAROUSEL SLIDER FOR THE APPROACH PAGE
 function carouselSlideApproach() {
           var lamps = $('.lamp1, .lamp2, .lamp3, .lamp4');
           var lampSmall = $('.lampSmall1, .lampSmall2, .lampSmall3, .lampSmall4');
           var lampBig = $('.lampBig1, .lampBig2, .lampBig3, .lampBig4');
-          lampBig.hide();
           var fl = $('.lamp1');
+          lampBig.hide();
           fl.css({'top': '60px', 'opacity': '1'});
           $('.lampSmall1').hide();
           $('.lampBig1').show();

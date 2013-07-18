@@ -759,6 +759,19 @@ ul.slider li.slide {
 }
 
 /* line 536, ../sass/screen.scss */
+#approach-interior .carousel-control {
+  position: absolute;
+  top: 60%;
+  left: 85px;
+}
+
+/* line 542, ../sass/screen.scss */
+#approach-interior .carousel-control.right {
+  right: 85px;
+  left: auto;
+}
+
+/* line 546, ../sass/screen.scss */
 .approachSlide .bigFont {
   width: 250px;
   float: left;
@@ -766,7 +779,7 @@ ul.slider li.slide {
   margin-left: 10px;
 }
 
-/* line 542, ../sass/screen.scss */
+/* line 552, ../sass/screen.scss */
 .approachSlide .bigFont h1 {
   font-family: Homestead-Display;
   font-size: 2.8em;
@@ -774,14 +787,14 @@ ul.slider li.slide {
   text-align: center;
 }
 
-/* line 548, ../sass/screen.scss */
+/* line 558, ../sass/screen.scss */
 .approachSlide p {
   width: 600px;
   float: left;
   padding: 10px;
 }
 
-/* line 555, ../sass/screen.scss */
+/* line 565, ../sass/screen.scss */
 #approachBox {
   position: relative;
   width: 800px;
@@ -789,13 +802,13 @@ ul.slider li.slide {
   background: #ccc;
 }
 
-/* line 561, ../sass/screen.scss */
+/* line 571, ../sass/screen.scss */
 .lamp1, .lamp2, .lamp3, .lamp4 {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
   opacity: 0.4;
 }
 
-/* line 564, ../sass/screen.scss */
+/* line 574, ../sass/screen.scss */
 .lamp1 {
   position: absolute;
   z-index: 15;
@@ -805,7 +818,7 @@ ul.slider li.slide {
   left: 0;
 }
 
-/* line 572, ../sass/screen.scss */
+/* line 582, ../sass/screen.scss */
 .lampSmall1 {
   position: absolute;
   top: 0;
@@ -815,7 +828,7 @@ ul.slider li.slide {
   height: 293px;
 }
 
-/* line 580, ../sass/screen.scss */
+/* line 590, ../sass/screen.scss */
 .lampBig1 {
   position: absolute;
   top: 0;
@@ -825,7 +838,7 @@ ul.slider li.slide {
   height: 293px;
 }
 
-/* line 588, ../sass/screen.scss */
+/* line 598, ../sass/screen.scss */
 .lamp2 {
   position: absolute;
   z-index: 15;
@@ -835,7 +848,7 @@ ul.slider li.slide {
   left: 200px;
 }
 
-/* line 596, ../sass/screen.scss */
+/* line 606, ../sass/screen.scss */
 .lampSmall2 {
   position: absolute;
   top: 0;
@@ -845,7 +858,7 @@ ul.slider li.slide {
   height: 293px;
 }
 
-/* line 604, ../sass/screen.scss */
+/* line 614, ../sass/screen.scss */
 .lampBig2 {
   position: absolute;
   top: 0;
@@ -855,7 +868,7 @@ ul.slider li.slide {
   height: 293px;
 }
 
-/* line 612, ../sass/screen.scss */
+/* line 622, ../sass/screen.scss */
 .lamp3 {
   position: absolute;
   z-index: 15;
@@ -865,7 +878,7 @@ ul.slider li.slide {
   left: 400px;
 }
 
-/* line 620, ../sass/screen.scss */
+/* line 630, ../sass/screen.scss */
 .lampSmall3 {
   position: absolute;
   top: 0;
@@ -875,7 +888,7 @@ ul.slider li.slide {
   height: 293px;
 }
 
-/* line 628, ../sass/screen.scss */
+/* line 638, ../sass/screen.scss */
 .lampBig3 {
   position: absolute;
   top: 0;
@@ -885,7 +898,7 @@ ul.slider li.slide {
   height: 293px;
 }
 
-/* line 636, ../sass/screen.scss */
+/* line 646, ../sass/screen.scss */
 .lamp4 {
   position: absolute;
   z-index: 15;
@@ -895,7 +908,7 @@ ul.slider li.slide {
   left: 600px;
 }
 
-/* line 644, ../sass/screen.scss */
+/* line 654, ../sass/screen.scss */
 .lampSmall4 {
   position: absolute;
   top: 0;
@@ -905,7 +918,7 @@ ul.slider li.slide {
   height: 293px;
 }
 
-/* line 652, ../sass/screen.scss */
+/* line 662, ../sass/screen.scss */
 .lampBig4 {
   position: absolute;
   top: 0;
@@ -915,7 +928,7 @@ ul.slider li.slide {
   height: 293px;
 }
 
-/* line 662, ../sass/screen.scss */
+/* line 672, ../sass/screen.scss */
 .formWrapper {
   background: #2cc0b7;
   width: 100%;
@@ -926,26 +939,26 @@ ul.slider li.slide {
   border-radius: 4px / 4px;
 }
 
-/* line 669, ../sass/screen.scss */
+/* line 679, ../sass/screen.scss */
 .formWrapper h1 {
   font-family: Nexa;
   color: white;
   font-size: 42px;
 }
 
-/* line 674, ../sass/screen.scss */
+/* line 684, ../sass/screen.scss */
 .formWrapper article {
   width: 80%;
   margin-right: 10%;
   margin-left: 10%;
 }
 
-/* line 679, ../sass/screen.scss */
+/* line 689, ../sass/screen.scss */
 .formWrapper article p {
   line-height: 26px;
 }
 
-/* line 682, ../sass/screen.scss */
+/* line 692, ../sass/screen.scss */
 .formWrapper h2 {
   font-family: Nexa;
   color: white;

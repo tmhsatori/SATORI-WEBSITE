@@ -533,6 +533,16 @@ ul.slider li.slide {
 .approachSlide {
   width: 100%;
 }
+#approach-interior .carousel-control {
+  position: absolute;
+  top: 60%;
+  left: 85px;
+}
+
+#approach-interior .carousel-control.right {
+  right: 85px;
+  left: auto;
+}
 .approachSlide .bigFont {
   width: 250px;
   float: left;
