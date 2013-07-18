@@ -494,7 +494,7 @@ ul.slider li.slide {
 }
 
 
-.carousel-linked-nav {
+#home-exterior .carousel-linked-nav {
   width: 100%;
   height: 50px;
   top: 67%;
@@ -505,11 +505,11 @@ ul.slider li.slide {
   outline: none;
   border: none;
 }
-.carousel-linked-nav li {
+#home-exterior .carousel-linked-nav li {
    float: left;
 }
 
-.carousel-linked-nav li a {
+#home-exterior .carousel-linked-nav li a {
   outline: none;
   border: none;
   display: block;
@@ -517,8 +517,18 @@ ul.slider li.slide {
   height: 25px;
   background: url(../img/navDots.png) 0 0 no-repeat;
 }
-.carousel-linked-nav li.active {
+#home-exterior .carousel-linked-nav li.active {
   background: url(../img/navDots.png) -25px 0 no-repeat;
+}
+#home-exterior  .carousel-control {
+  position: absolute;
+  top: 30%;
+  left: 85px;
+}
+
+#home-exterior  .carousel-control.right {
+  right: 85px;
+  left: auto;
 }
 
 // APPROACH SLIDE STYLING FOR CAROUSEL

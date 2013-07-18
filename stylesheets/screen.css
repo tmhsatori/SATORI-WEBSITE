@@ -715,7 +715,7 @@ ul.slider li.slide {
 }
 
 /* line 497, ../sass/screen.scss */
-.carousel-linked-nav {
+#home-exterior .carousel-linked-nav {
   width: 100%;
   height: 50px;
   top: 67%;
@@ -728,12 +728,12 @@ ul.slider li.slide {
 }
 
 /* line 508, ../sass/screen.scss */
-.carousel-linked-nav li {
+#home-exterior .carousel-linked-nav li {
   float: left;
 }
 
 /* line 512, ../sass/screen.scss */
-.carousel-linked-nav li a {
+#home-exterior .carousel-linked-nav li a {
   outline: none;
   border: none;
   display: block;
@@ -743,35 +743,48 @@ ul.slider li.slide {
 }
 
 /* line 520, ../sass/screen.scss */
-.carousel-linked-nav li.active {
+#home-exterior .carousel-linked-nav li.active {
   background: url(../img/navDots.png) -25px 0 no-repeat;
 }
 
+/* line 523, ../sass/screen.scss */
+#home-exterior .carousel-control {
+  position: absolute;
+  top: 30%;
+  left: 85px;
+}
+
 /* line 529, ../sass/screen.scss */
+#home-exterior .carousel-control.right {
+  right: 85px;
+  left: auto;
+}
+
+/* line 539, ../sass/screen.scss */
 #approachSlide .carousel-inner {
   width: 900px;
   margin: 0 auto;
 }
 
-/* line 533, ../sass/screen.scss */
+/* line 543, ../sass/screen.scss */
 .approachSlide {
   width: 100%;
 }
 
-/* line 536, ../sass/screen.scss */
+/* line 546, ../sass/screen.scss */
 #approach-interior .carousel-control {
   position: absolute;
   top: 60%;
   left: 85px;
 }
 
-/* line 542, ../sass/screen.scss */
+/* line 552, ../sass/screen.scss */
 #approach-interior .carousel-control.right {
   right: 85px;
   left: auto;
 }
 
-/* line 546, ../sass/screen.scss */
+/* line 556, ../sass/screen.scss */
 .approachSlide .bigFont {
   width: 250px;
   float: left;
@@ -779,7 +792,7 @@ ul.slider li.slide {
   margin-left: 10px;
 }
 
-/* line 552, ../sass/screen.scss */
+/* line 562, ../sass/screen.scss */
 .approachSlide .bigFont h1 {
   font-family: Homestead-Display;
   font-size: 2.8em;
@@ -787,14 +800,14 @@ ul.slider li.slide {
   text-align: center;
 }
 
-/* line 558, ../sass/screen.scss */
+/* line 568, ../sass/screen.scss */
 .approachSlide p {
   width: 600px;
   float: left;
   padding: 10px;
 }
 
-/* line 565, ../sass/screen.scss */
+/* line 575, ../sass/screen.scss */
 #approachBox {
   position: relative;
   width: 800px;
@@ -802,13 +815,13 @@ ul.slider li.slide {
   background: #ccc;
 }
 
-/* line 571, ../sass/screen.scss */
+/* line 581, ../sass/screen.scss */
 .lamp1, .lamp2, .lamp3, .lamp4 {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
   opacity: 0.4;
 }
 
-/* line 574, ../sass/screen.scss */
+/* line 584, ../sass/screen.scss */
 .lamp1 {
   position: absolute;
   z-index: 15;
@@ -818,7 +831,7 @@ ul.slider li.slide {
   left: 0;
 }
 
-/* line 582, ../sass/screen.scss */
+/* line 592, ../sass/screen.scss */
 .lampSmall1 {
   position: absolute;
   top: 0;
@@ -828,7 +841,7 @@ ul.slider li.slide {
   height: 293px;
 }
 
-/* line 590, ../sass/screen.scss */
+/* line 600, ../sass/screen.scss */
 .lampBig1 {
   position: absolute;
   top: 0;
@@ -838,7 +851,7 @@ ul.slider li.slide {
   height: 293px;
 }
 
-/* line 598, ../sass/screen.scss */
+/* line 608, ../sass/screen.scss */
 .lamp2 {
   position: absolute;
   z-index: 15;
@@ -848,7 +861,7 @@ ul.slider li.slide {
   left: 200px;
 }
 
-/* line 606, ../sass/screen.scss */
+/* line 616, ../sass/screen.scss */
 .lampSmall2 {
   position: absolute;
   top: 0;
@@ -858,7 +871,7 @@ ul.slider li.slide {
   height: 293px;
 }
 
-/* line 614, ../sass/screen.scss */
+/* line 624, ../sass/screen.scss */
 .lampBig2 {
   position: absolute;
   top: 0;
@@ -868,7 +881,7 @@ ul.slider li.slide {
   height: 293px;
 }
 
-/* line 622, ../sass/screen.scss */
+/* line 632, ../sass/screen.scss */
 .lamp3 {
   position: absolute;
   z-index: 15;
@@ -878,7 +891,7 @@ ul.slider li.slide {
   left: 400px;
 }
 
-/* line 630, ../sass/screen.scss */
+/* line 640, ../sass/screen.scss */
 .lampSmall3 {
   position: absolute;
   top: 0;
@@ -888,7 +901,7 @@ ul.slider li.slide {
   height: 293px;
 }
 
-/* line 638, ../sass/screen.scss */
+/* line 648, ../sass/screen.scss */
 .lampBig3 {
   position: absolute;
   top: 0;
@@ -898,7 +911,7 @@ ul.slider li.slide {
   height: 293px;
 }
 
-/* line 646, ../sass/screen.scss */
+/* line 656, ../sass/screen.scss */
 .lamp4 {
   position: absolute;
   z-index: 15;
@@ -908,7 +921,7 @@ ul.slider li.slide {
   left: 600px;
 }
 
-/* line 654, ../sass/screen.scss */
+/* line 664, ../sass/screen.scss */
 .lampSmall4 {
   position: absolute;
   top: 0;
@@ -918,7 +931,7 @@ ul.slider li.slide {
   height: 293px;
 }
 
-/* line 662, ../sass/screen.scss */
+/* line 672, ../sass/screen.scss */
 .lampBig4 {
   position: absolute;
   top: 0;
@@ -928,7 +941,7 @@ ul.slider li.slide {
   height: 293px;
 }
 
-/* line 672, ../sass/screen.scss */
+/* line 682, ../sass/screen.scss */
 .formWrapper {
   background: #2cc0b7;
   width: 100%;
@@ -939,26 +952,26 @@ ul.slider li.slide {
   border-radius: 4px / 4px;
 }
 
-/* line 679, ../sass/screen.scss */
+/* line 689, ../sass/screen.scss */
 .formWrapper h1 {
   font-family: Nexa;
   color: white;
   font-size: 42px;
 }
 
-/* line 684, ../sass/screen.scss */
+/* line 694, ../sass/screen.scss */
 .formWrapper article {
   width: 80%;
   margin-right: 10%;
   margin-left: 10%;
 }
 
-/* line 689, ../sass/screen.scss */
+/* line 699, ../sass/screen.scss */
 .formWrapper article p {
   line-height: 26px;
 }
 
-/* line 692, ../sass/screen.scss */
+/* line 702, ../sass/screen.scss */
 .formWrapper h2 {
   font-family: Nexa;
   color: white;
