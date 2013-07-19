@@ -102,7 +102,8 @@
           }
         });
       }
-    // SLIDE THE NAV UP TO THE APPROPRIATE SLIDE WITH ANY OBJECT THAT HAS THE CLASS 'more'
+    // Any object with the class 'more' will slide to the appropriate slide using the href tag. 
+    // ex a href="#contact" will take you to the the contact interior page.
     function SlidenavUp() {
       $(".more").unbind('click').click(function(e) {
         var id = $(this).attr('href');
