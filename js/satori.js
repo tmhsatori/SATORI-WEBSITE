@@ -9,6 +9,7 @@
         satoriSlider();
         slideHome();
         carouselLinks();
+        SlidenavUp();
         carouselLinksApproach();
         carouselSlidehome();
         lampLinksApproach();
@@ -104,9 +105,12 @@
     // SLIDE THE NAV UP TO THE APPROPRIATE SLIDE WITH ANY OBJECT THAT HAS THE CLASS 'more'
     function SlidenavUp() {
       $(".more").unbind('click').click(function(e) {
+        var id = $(this).attr('href');
+        var iSlide = (id + '-interior');
+        var Slide = (id + '-exterior');
         e.preventDefault();
         hideInteriorSlides();
-        $(Slide).fadeIn();
+        $(iSlide).fadeIn();
         $('#interior-page').stop().animate({'bottom': '0px'}, 500, 'easeInQuad');
         pageState = 'interior';
       });

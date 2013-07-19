@@ -338,7 +338,7 @@ ul#main-nav li a.active {
 }
 
 /* line 208, ../sass/screen.scss */
-.more {
+a.more {
   display: block;
   width: 60px;
   padding: 3px;
@@ -350,11 +350,12 @@ ul#main-nav li a.active {
   cursor: pointer;
   position: relative;
   background: #222;
-  margin: 15px 25px;
   -webkit-border-radius: 4px 4px;
   -moz-border-radius: 4px / 4px;
   border-radius: 4px / 4px;
   font-family: Gotham-Book;
+  margin: 0 auto !important;
+  text-align: center !important;
 }
 
 /* line 224, ../sass/screen.scss */

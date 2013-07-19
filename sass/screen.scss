@@ -205,7 +205,7 @@ nav {
   background: white;
 }
 
-.more {
+a.more {
   display: block;
   width: 60px;
   padding: 3px;
@@ -217,9 +217,9 @@ nav {
   cursor: pointer;
   position: relative;
   background: #222;
-  margin: 15px 25px;
   @include border-radius(4px, 4px);
   font-family: Gotham-Book;
+  margin: 0 auto !important; text-align: center !important;
 }
 #home-slide .more {
   color: $yellow-color;
