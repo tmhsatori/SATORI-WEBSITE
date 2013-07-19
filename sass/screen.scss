@@ -256,7 +256,7 @@ nav {
     background: url(../img/slide_3_bk_tile2.png) repeat;
   }
   #contact-slide .texture, #contact-interior .texture {
-    background: url(../img/contactmap.jpg) center repeat;
+    background: url(../img/contactmap2.jpg) center repeat;
   }
 
 
@@ -457,11 +457,12 @@ form-horizontal {
 
 //SUBNAVIGATION STYLING
 .subnav {
+  position: relative;
   height: 40px;
   overflow: hidden;
   width: 100%;
-  background: #222;
-   @include opacity(0.5);
+  background: #ccc;
+  z-index: 150;
 }
   
 ul.sub {
@@ -677,6 +678,31 @@ ul.slider li.slide {
     width: 265px;
     height: 293px;
   }
+
+#approach-interior ol.carousel-linked-nav {
+  width: 100%;
+  position: absolute;
+  z-index: 180;
+  top: 10px;
+  left: 27%;
+}
+#approach-interior ol.carousel-linked-nav li {
+  float: left;
+  margin-right: 4em;
+  list-style: none;
+}
+#approach-interior ol.carousel-linked-nav li a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+#approach-interior nav {
+  position: relative;
+  z-index:2500;
+  width: 100%;
+  height: 60px;
+  background: #ccc;
+}
 // END OF APPROACH STYLING
 
 .formWrapper {
@@ -705,3 +731,37 @@ ul.slider li.slide {
   padding: 10px 0;
   font-size: 32px;
 }
+.input-prepend .btn,
+.input-append .btn {
+  margin-left: -1px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+
+.formWrapper .btn {
+  background: none;
+  border: none; 
+  text-shadow: none;
+}
+.formWrapper .send {
+  background: #222222 !important;
+  padding: 5px 7px;
+  color: $blue-color;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
