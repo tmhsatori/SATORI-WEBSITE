@@ -14,26 +14,26 @@
 //Blanch
 
 //COLOR VARIABLES GLOBAL
-$green-color : #00cc7a;
-$pink-color : #e27985;
-$blue-color : #2cc0b7;
-$yellow-color : #ffbf24;
-$purple-color : #ff5ccb;
+$solutions-color : #00cc7a;
+$approach-color : #e27985;
+$contact-color : #2cc0b7;
+$about-color : #ffbf24;
+$home-color : #ffffff;
 
 .greenColor {
-  color: $green-color !important;
+  color: $solutions-color !important;
 }
 .blueColor {
-  color: $blue-color !important;
+  color: $contact-color !important;
 }
 .pinkColor {
-  color: $pink-color !important;
+  color: $approach-color !important;
 }
 .yellowColor {
-  color: $yellow-color !important;
+  color: $about-color !important;
 }
 .purpleColor {
-  color: $purple-color !important;
+  color: $home-color !important;
 }
 * {
   outline: 0;
@@ -42,7 +42,11 @@ a:hover, a:active, a:focus {
   outline: 0;
 }
 body {background: #424242; height: 100%; overflow: hidden; font-family: Gotham-Book; font-style: normal;}
-
+.fitContainer {
+  height: 1000px; 
+  width: 100%; 
+  position: relative;
+}
 .text-align-center {
   text-align: center;
 }
@@ -76,10 +80,10 @@ a#satori-logo {
 }
 
   .home-color #satori-logo {
-    background: url(../img/logo/logo-sprite.jpg) -81px 0 no-repeat;
+    background: url(../img/logo/logo-sprite.jpg) 0 0 no-repeat;
   }
   .about-color #satori-logo {
-    background: url(../img/logo/logo-sprite.jpg) -40px 0 no-repeat;
+    background: url(../img/logo/logo-sprite.jpg) -81px 0 no-repeat;
   }
   .solutions-color #satori-logo {
     background: url(../img/logo/logo-sprite.jpg) -202px 0 no-repeat;
@@ -92,10 +96,10 @@ a#satori-logo {
   }
 
   .home-color #twitter a {
-    background: url(../img/socialicons.png) -55px 0 no-repeat;
+    background: url(../img/socialicons.png) 0 0 no-repeat;
   }
   .about-color #twitter a {
-    background: url(../img/socialicons.png) -290px 0 no-repeat;
+    background: url(../img/socialicons.png) -55px 0 no-repeat;
   }
   .solutions-color #twitter a {
     background: url(../img/socialicons.png) -115px 0 no-repeat;
@@ -108,10 +112,10 @@ a#satori-logo {
   }
 
   .home-color #facebook a {
-    background: url(../img/socialicons.png) -90px 0 no-repeat;
+    background: url(../img/socialicons.png) -34px 0 no-repeat;
   }
   .about-color #facebook a {
-    background: url(../img/socialicons.png) -325px 0 no-repeat;
+    background: url(../img/socialicons.png) -90px 0 no-repeat;
   }
   .solutions-color #facebook a {
     background: url(../img/socialicons.png) -149px 0 no-repeat;
@@ -164,19 +168,19 @@ nav {
           }
 
           #main-nav.home-color li a {
-            color: $yellow-color;
+            color: $home-color;
           }
           #main-nav.about-color li a {
-            color: $purple-color;
+            color: $about-color;
           }
           #main-nav.solutions-color li a {
-            color: $green-color;
+            color: $solutions-color;
           }
           #main-nav.approach-color li a {
-            color: $pink-color;
+            color: $approach-color;
           }
           #main-nav.contact-color li a {
-            color: $blue-color;
+            color: $contact-color;
           }
 
 #exterior-page {
@@ -222,19 +226,19 @@ a.more {
   margin: 0 auto !important; text-align: center !important;
 }
 #home-slide .more {
-  color: $yellow-color;
+  color: $home-color;
 }
 #about-slide .more {
-  color: $purple-color;
+  color: $about-color;
 }
 #solutions-slide .more {
-  color: $green-color;
+  color: $solutions-color;
 }
 #approach-slide .more {
-  color: $pink-color;
+  color: $approach-color;
 }
 #contact-slide .more {
-  color: $blue-color;
+  color: $contact-color;
 }
 .texture {
   width: 100%;
@@ -264,12 +268,12 @@ a.more {
   margin: 0 auto;
 }
 #home-slide .exteriorImage {
-  background: url(../img/home-person.png) no-repeat;
-  width: 299px;
-  height: 570px;
+  background: url(../img/logo/logoBig.png) no-repeat;
+  width: 449px;
+  height: 449px;
 }
 #about-slide .exteriorImage {
-  background: url(../img/happyguy-purp.png) no-repeat;
+  background: url(../img/home-person.png) no-repeat;
   width: 439px;
   height: 559px;
 }
@@ -290,24 +294,24 @@ a.more {
 }
 // HOMEPAGE-SLIDE STYLING
 #home-slide h1 {
-  font-family: Ribbon;
-  font-size: 6.1em;
-  color: $yellow-color;
+  font-family: Gotham-Book;
+  font-size: 3.1em;
+  color: black;
 }
 #home-slide h1.headingOne {
   font-family: Homestead-Display;
   font-size: 6.7em;
-  color: $yellow-color;
+  color: $home-color;
 }
 #home-slide h2 {
   font-family: Mensch;
   font-size: 2.0em;
-  color: $yellow-color;
+  color: $home-color;
 }
 #home-slide h2.headingTwo {
   font-family: Gotham-Book;
   font-size: 2.1em;
-  color: $yellow-color;
+  color: $home-color;
 }
 .icon-circles {
   width: 100%;
@@ -339,25 +343,25 @@ a.more {
 #about-slide h1 {
   font-family: Blanch;
   font-size: 8.2em;
-  color: $purple-color;
+  color: $about-color;
   text-align: center; 
 }
 #about-slide h1.headingOne {
   font-family: Homestead-Display;
   font-size: 6.7em;
-  color: $purple-color;
+  color: $about-color;
   text-align: center;
 }
 #about-slide h2 {
   font-family: Homestead-Display;
   font-size: 2.0em;
-  color: $purple-color;
+  color: $about-color;
   text-align: center;
 }
 #about-slide h2.headingTwo {
   font-family: Gotham-Book;
   font-size: 2.0em;
-  color: $purple-color;
+  color: $about-color;
   text-align: center;
 }
 // END OF ABOUTPAGE-SLIDER STYLING
@@ -365,25 +369,25 @@ a.more {
 #solutions-slide h1 {
   font-family: Homestead-Display;
   font-size: 2.8em;
-  color: $green-color;
+  color: $solutions-color;
   text-align: center; 
 }
 #solutions-slide h1.headingOne {
   font-family: Mensch;
   font-size: 2.8em;
-  color: $green-color;
+  color: $solutions-color;
   text-align: center;
 }
 #solutions-slide h2 {
   font-family: Blanch;
   font-size: 8.7em;
-  color: $green-color;
+  color: $solutions-color;
   text-align: center;
 }
 #solutions-slide h2.headingTwo {
   font-family: Gotham-Book;
   font-size: 1.4em;
-  color: $green-color;
+  color: $solutions-color;
   text-align: center;
 }
 // END OF SOLUTIONSPAGE-SLDER STYLING
@@ -391,7 +395,7 @@ a.more {
 #approach-slide h1 {
   font-family: Ribbon;
   font-size: 3.5em;
-  color: $pink-color;
+  color: $approach-color;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -399,7 +403,7 @@ a.more {
 #approach-slide h1.headingOne {
   font-family: Mensch;
   font-size: 5.8em;
-  color: $pink-color;
+  color: $approach-color;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -407,7 +411,7 @@ a.more {
 #approach-slide h2 {
   font-family: Homestead-Display;
   font-size: 8.7em;
-  color: $pink-color;
+  color: $approach-color;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -415,7 +419,7 @@ a.more {
 #approach-slide h2.headingTwo {
   font-family: Gotham-Book;
   font-size: 1.4em;
-  color: $pink-color;
+  color: $approach-color;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -479,7 +483,7 @@ ul.sub {
       text-decoration: none;
     }
     ul.sub li a.activeSlide {
-      color: $purple-color;
+      color: $about-color;
     }
 ul.slider {
   overflow: hidden;
@@ -563,7 +567,7 @@ ul.slider li.slide {
 .approachSlide .bigFont h1 {
   font-family: Homestead-Display;
   font-size: 2.8em;
-  color: $pink-color;
+  color: $approach-color;
   text-align: center;
 }
 .approachSlide p {
@@ -705,8 +709,34 @@ ul.slider li.slide {
 }
 // END OF APPROACH STYLING
 
+//SOLUTIONS CAROUSEL STYLING
+#solutions-interior ol.carousel-linked-nav {
+  width: 100%;
+  position: absolute;
+  z-index: 180;
+  top: 10px;
+  left: 27%;
+}
+#solutions-interior ol.carousel-linked-nav li {
+  float: left;
+  margin-right: 4em;
+  list-style: none;
+}
+#solutions-interior ol.carousel-linked-nav li a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+#solutions-interior nav {
+  position: relative;
+  z-index:2500;
+  width: 100%;
+  height: 60px;
+  background: #ccc;
+}
+// END OF APPROACH STYLING
 .formWrapper {
-  background: $blue-color;
+  background: $contact-color;
   width: 100%;
   height: 250px;
   padding: 10px;
@@ -748,7 +778,7 @@ ul.slider li.slide {
 .formWrapper .send {
   background: #222222 !important;
   padding: 5px 7px;
-  color: $blue-color;
+  color: $contact-color;
   text-align: center;
 }
 

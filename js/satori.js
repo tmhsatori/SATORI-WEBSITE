@@ -1,4 +1,4 @@
- // Fix pages to fit the viewport at all times
+//DO NOT USE SECTION ID'S THAT END WITH '-exterior' or '-interior'. LIKE <section id="turtle-exterior"> Only use when adding a Slide
  var pageState;
       $(function() {
         pageState = 'exterior';
@@ -9,8 +9,10 @@
         satoriSlider();
         slideHome();
         carouselLinks();
+        //pageIdent();
         SlidenavUp();
         carouselLinksApproach();
+        carouselLinksSolutions();
         carouselSlidehome();
         lampLinksApproach();
         carouselSlideApproach();
@@ -20,21 +22,23 @@
         window.onresize = function(event) {
           resizeDiv();
         };
-        $('#project05, #approachSlide').each(function(){
-        $(this).carousel({
-            interval: false
+        $('#project05, #approachSlide, #solutions-carousel').each(function(){
+          $(this).carousel({
+          interval: false
         });
-      }); 
+      });
     });
 
     function hideSlides() {
-      $("#home-interior, #about-interior, #solutions-interior, #approach-interior, #contact-interior, #home-exterior, #about-exterior, #solutions-exterior, #approach-exterior, #contact-exterior").hide();
+      //locates all slides that ID name end with '-exterior' and '-interior'
+      $("section[id$='-exterior']").hide();
+      $("section[id$='-interior']").hide();
     }
     function hideInteriorSlides() {
-      $("#home-interior, #about-interior, #solutions-interior, #approach-interior, #contact-interior").hide();
+      $("section[id$='-interior']").hide();
     }
     function hideExteriorSlides() {
-      $("#home-exterior, #about-exterior, #solutions-exterior, #approach-exterior, #contact-exterior").hide();
+      $("section[id$='-exterior']").hide();
     }
     //GRABS THE CURRENT DIMENSIONS OF THE BROWSERS VIEWPORT AND UPDATES THE CSS TO FIT THE CURRENT WIDTH AND HEIGHT
     function resizeDiv() {
@@ -62,6 +66,7 @@
         var Slide = ('#' + id + '-exterior');
         //switch color of nav links based on current slide
         var slideColor = (id + '-color');
+
         if(!(id == 'twitter' || id == 'facebook')) {
           $("#main-nav li#home, #main-nav li#about, #main-nav li#solutions, #main-nav li#approach, #main-nav li#contact, #main-nav").removeClass();
           $(this).addClass('active');
@@ -71,7 +76,7 @@
         var bottom = $("#interior-page").css('bottom').replace('px','');
         var g = bottom;
           if(!(id == 'twitter' || id == 'facebook')) {
-            if(pageState == 'interior' & id == 'home' ) {                
+            if(pageState == 'interior' & id == 'home' ) {
               hideExteriorSlides();
               $(iSlide).fadeOut();
               $(Slide).fadeIn();
@@ -109,11 +114,35 @@
         var id = $(this).attr('href');
         var iSlide = (id + '-interior');
         var Slide = (id + '-exterior');
+        if( (id == '#approach') || (id == '#about')) {
+          $(".subnav").delay(100).fadeIn();
+          $('.subnav').delay(100).animate({'height': "40px"}, 500, 'easeInQuad');
+        }
         e.preventDefault();
         hideInteriorSlides();
         $(iSlide).fadeIn();
         $('#interior-page').stop().animate({'bottom': '0px'}, 500, 'easeInQuad');
         pageState = 'interior';
+         if( id == '#home') {
+           $("#main-nav a").removeClass('active');
+           $("#main-nav a[href$='home']").addClass('active');
+         }
+         else if( id == '#about') {
+           $("#main-nav a").removeClass('active');
+           $("#main-nav a[href$='about']").addClass('active');
+         }
+         else if( id == '#solutions') {
+           $("#main-nav a").removeClass('active');
+           $("#main-nav a[href$='solutions']").addClass('active');
+         }
+         else if( id == '#approach') {
+           $("#main-nav a").removeClass('active');
+           $("#main-nav a[href$='approach']").addClass('active');
+         }
+         else if( id == '#contact') {
+           $("#main-nav a").removeClass('active');
+           $("#main-nav a[href$='contact']").addClass('active');
+         }
       });
     }
 
@@ -121,7 +150,7 @@
     function activeFunc() {
       $('#main-nav li a').unbind('click').click(function(event){
         var sid = $(this).attr('id');
-        if((pageState == 'exterior') & ($(this).hasClass('active')) ) {
+        if($(this).hasClass('active')) {
             $(this).css({'cursor': 'pointer'});
             event.stopPropagation();
           }
@@ -135,11 +164,13 @@
     // SATORI CUSTOM SLIDER FOR THE INTERIOR SUBNAV NAVIGATION     
     function satoriSlider() {
       $("ul.slider li").hide();
-        vpw = $(window).width();
-        i = vpw*2;
+      vpw = $(window).width();
+      i = vpw*2;
+      //INITIAL STYLING
       $("ul.slider li").css({'margin-left': i + 'px'});
       $("ul.slider li:first").css({'margin-left': '0px'}).show();
       $("ul.sub li a:first").addClass('activeSlide');
+      //END OF INITAL STYLING
       $("ul.sub li").unbind('click').click(function(e) {
          activeLink = $(this).find("a");
         if(activeLink.hasClass('activeSlide')) {
@@ -147,7 +178,6 @@
         }
         else{
         k = $(this).attr('class');
-        //alert(k);
         q = $('ul.slider li.' + k );
         $("ul.slider li").removeClass('active');
         q.addClass('active');
@@ -237,6 +267,16 @@ function carouselLinksApproach() {
             return false;
         });
       }
+//CAROUSEL SLIDER CLICK EVENT FOR THE SOLUTIONS PAGE
+function carouselLinksSolutions() {
+        $('#solutions-interior .carousel-linked-nav > li > a').click(function() {
+            var item = Number($(this).attr('href').substring(1));
+            $('#solutions-interior .carousel').carousel(item - 1);
+            $('#solutions-interior .carousel-linked-nav .active').removeClass('active');
+            $(this).parent().addClass('active');
+            return false;
+        });
+      }
 //CAROUSEL SLIDER CLICK EVENT FOR THE APPROACH PAGE
 function lampLinksApproach() {
         $('#approach-interior .lamp-linked-nav > li > a').click(function() {
@@ -262,11 +302,13 @@ function carouselSlideApproach() {
           $('#approach-interior .carousel-linked-nav .active').removeClass('active');
           var idx = $('#approach-interior .carousel .item.active').index();
           $('#approach-interior .carousel-linked-nav li:eq(' + idx + ')').addClass('active');
-          
+          var initSlide = function() {
+            $('#approach-interior .carousel-linked-nav li:eq(' + idx + ')').addClass('active');
+            lamps.animate({'top': '0', 'width': '300px'}, 900, 'linear');
+            lamps.css({'opacity': '.4'});
+          };
           if(idx === 0) {
-              $('#approach-interior .carousel-linked-nav li:eq(' + idx + ')').addClass('active');
-              lamps.animate({'top': '0', 'width': '300px'}, 900, 'linear');
-              lamps.css({'opacity': '.4'});
+              initSlide();
               $('.lamp1').animate({'width': '282px', 'height': '350px'}, 100, 'linear');
               $('.lamp1').css({'opacity': '1'}, 100, 'linear');
               lampSmall.fadeIn();
@@ -275,9 +317,7 @@ function carouselSlideApproach() {
               $('.lampBig1').fadeIn('fast');
             }
             else if(idx === 1) {
-              $('#approach-interior .carousel-linked-nav li:eq(' + idx + ')').addClass('active');
-              lamps.animate({'top': '0', 'width': '300px'}, 900, 'linear');
-              lamps.css({'opacity': '.4'});
+              initSlide();
               $('.lamp2').animate({'width': '282px', 'height': '350px'}, 100, 'linear');
               $('.lamp2').css({'opacity': '1'}, 100, 'linear');
               lampSmall.fadeIn();
@@ -286,9 +326,7 @@ function carouselSlideApproach() {
               $('.lampBig2').fadeIn('fast');
             }
             else if(idx === 2) {
-              $('#approach-interior .carousel-linked-nav li:eq(' + idx + ')').addClass('active');
-              lamps.animate({'top': '0', 'width': '300px'}, 900, 'linear');
-              lamps.css({'opacity': '.4'});
+              initSlide();
               $('.lamp3').animate({'width': '282px', 'height': '350px'}, 100, 'linear');
               $('.lamp3').css({'opacity': '1'}, 100, 'linear');
               lampSmall.fadeIn();
@@ -297,9 +335,7 @@ function carouselSlideApproach() {
               $('.lampBig3').fadeIn('fast');
             }
             else if(idx === 3) {
-              $('#approach-interior .carousel-linked-nav li:eq(' + idx + ')').addClass('active');
-              lamps.animate({'top': '0', 'width': '300px'}, 900, 'linear');
-              lamps.css({'opacity': '.4'});
+              initSlide();
               $('.lamp4').animate({'width': '282px', 'height': '350px'}, 100, 'linear');
               $('.lamp4').css({'opacity': '1'}, 100, 'linear');
               lampSmall.fadeIn();
@@ -311,6 +347,29 @@ function carouselSlideApproach() {
       }
 
 
+function pageIdent() {
+var id = '';
+  if( ($("#about-interior").is(':visible')) || ($("#about-exterior").is(':visible'))) {
+    id = 'about';
+    alert('about');
+  }
+  else if( ($("#home-interior").is(':visible')) || ($("#home-exterior").is(':visible'))) {
+    id = 'home';
+    alert('home');
+  }
+  else if( ($("#solutions-interior").is(':visible')) || ($("#solutions-exterior").is(':visible'))) {
+    id = 'solutions';
+    alert('solutions');
+  }
+  else if( ($("#approach-interior").is(':visible')) || ($("#approach-exterior").is(':visible'))) {
+    id = 'approach';
+    alert('approach');
+  }
+  else if( ($("#contact-interior").is(':visible')) || ($("#contact-exterior").is(':visible'))) {
+    id = 'contact';
+    alert('contact');
+  }
 
+}
 
 

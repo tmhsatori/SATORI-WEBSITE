@@ -31,33 +31,26 @@
                   <!-- Carousel items -->
                   <ol class="carousel-inner">
                     <li class="item active home">
-                      <div id="home-slide" class="container" style="height: 1000px; width: 100%; position: relative;">
+                      <div id="home-slide" class="container fitContainer">
                         <div class="texture"></div>
                         <div class="innerContentWrapper">
                           <div class="container">
-                          <div class="row-fluid">
-                            <div class="span4">
-                              <div class="exteriorImage"></div>
-                            </div>
-                            <div class="span8 top3">
-                              <div class="row offset1">
-                                <div class="span12">
-                                  <article>
-                                   <img src="img/homeText.png" alt="">
-                                  </article>
-                                </div>
-                              </div><!-- end of row  -->
-                              <div class="row top3">
-                                <a href="#contact" class="more">More</a>
-                              </div><!-- end of row  -->
-                            </div>
-                          </div><!-- end of row  -->
+                            <div class="row top3">
+                              <div class="span12">
+                                <div class="exteriorImage"></div>
+                              </div>
+                            <div class="row">
+                              <div class="span12 top3">
+                                <h1 class="text-align-center">SATORI INTERACTIVE</h1>
+                              </div>
+                            </div><!-- end of row  -->
+                            </div>  
+                          </div><!-- end of CONTAINER  -->
                         </div><!-- end of innerContentWrapper  -->
-                        </div><!-- end of CONTAINER  -->
                       </div>
                     </li>
                     <li class="item about">
-                      <div id="about-slide" class="container" style="height: 1000px; width: 100%; position: relative;">
+                      <div id="about-slide" class="container fitContainer">
                         <div class="texture"></div>
                         <div class="innerContentWrapper">
                           <div class="container">
@@ -69,7 +62,7 @@
                               <div class="row offset1">
                                 <div class="span12">
                                   <article>
-                                   <img class="offset1" src="img/aboutText.png" alt="">
+                                   <img src="img/homeText.png" alt="">
                                   </article>
                                 </div>
                               </div><!-- end of row  -->
@@ -83,7 +76,7 @@
                       </div>
                     </li>
                     <li class="item solutions">
-                      <div id="solutions-slide" class="container" style="height: 1000px; width: 100%; position: relative;">
+                      <div id="solutions-slide" class="container fitContainer">
                         <div class="texture"></div>
                         <div class="innerContentWrapper">
                           <div class="container">
@@ -109,7 +102,7 @@
                       </div><!-- end of SOLUTIONS-SLIDE  -->
                     </li>
                     <li class="item approach">
-                      <div id="approach-slide" class="container" style="height: 1000px; width: 100%; position: relative;">
+                      <div id="approach-slide" class="container fitContainer">
                         <div class="texture"></div>
                         <div class="innerContentWrapper">
                           <div class="container">
@@ -158,11 +151,11 @@
       <div class="span12">
         <div class="container">
           <ul id="main-nav" class="home-color">
-            <li id="home"><a id="satori-logo" class="home-color pull-left" href="#da">Home</a></li>
-            <li id="about"><a class="pull-right" href="#db">About</a></li>
-            <li id="solutions"><a href="#dc">Solutions</a></li>
-            <li id="approach"><a href="#dd">Approach</a></li>
-            <li id="contact"><a href="#de">Contact</a></li>
+            <li id="home"><a id="satori-logo" class="home-color pull-left" href="#home">Home</a></li>
+            <li id="about"><a class="pull-right" href="#about">About</a></li>
+            <li id="solutions"><a href="#solutions">Solutions</a></li>
+            <li id="approach"><a href="#approach">Approach</a></li>
+            <li id="contact"><a href="#contact">Contact</a></li>
             <li id="facebook"><a id="facebook-icon" class="home-color pull-left" href="www.twitter.com" target="blank">Facebook</a></li>
             <li id="twitter"><a id="twitter-icon" class="home-color pull-right" href="www.facebook.com" target="blank">Twitter</a></li>
           </ul>
@@ -301,30 +294,47 @@
   </section>
   <section id="solutions-interior" class="content">
     <div class="texture"></div>
-    <div class="innerContentWrapper">
-      <div class="container">
-        <div class="row-fluid">
-        <div class="span4 top3">
-          <img class="poloroid" src="img/logo.png" alt="" />
-        </div>
-        <div class="span8 top3">
-          <div class="row offset1">
-            <div class="span12">
-              <article>
-               <h1>WE NEED YOU</h1>
-               <h2>ONLINE &</h2>
-               <h1 class="headingOne">MOBILE</h1>
-               <h2 class="headingTwo">AND SO DOES SPARKY!</h2>
-              </article>
+    <div class="innerContentWrapper">    
+            <div class="row-fluid">
+              <!-- LINKED NAV -->
+              <div class="span12">
+                <div id="solutions-carousel" class="carousel slide">              
+                  <!-- Carousel items -->
+                  <ol class="carousel-inner">
+                    <li class="item home active">
+                      <div id="home-slide" class="container fitContainer">
+                        <div class="texture"></div>
+                        <div class="innerContentWrapper">
+                          <div class="container">
+                            <h1>hello</h1>
+                        </div><!-- end of innerContentWrapper  -->
+                        </div><!-- end of CONTAINER  -->
+                      </div>
+                    </li>
+                    <li class="item about">
+                      <div id="about-slide" class="container fitContainer">
+                        <div class="texture"></div>
+                        <div class="innerContentWrapper">
+                          <div class="container">
+                            
+                        </div><!-- end of innerContentWrapper  -->
+                        </div><!-- end of CONTAINER  -->
+                      </div><!-- END OF HOME-SLIDE -->
+                    </li>
+                  </ol>
+                  <!-- Carousel nav -->
+                  <ol class="carousel-linked-nav">
+                    <li class="active"><a href="#1">Home</a></li>
+                    <li><a href="#2">About</a></li>
+                    <li><a href="#3">Solutions</a></li>
+                    <li><a href="#4">Approach</a></li>
+                  </ol>
+                  <a class="carousel-control left" href="#solutions-carousel" data-slide="prev">&lsaquo;</a>
+                  <a class="carousel-control right" href="#solutions-carousel" data-slide="next">&rsaquo;</a>
+                </div>
+              </div>
             </div>
-          </div><!-- end of row  -->
-          <div class="row offset1 top3">
-            <div class="btn center">More</div>
-          </div><!-- end of row  -->
-        </div><!-- end of SPAN  -->
-        </div><!-- end of row  -->
-      </div><!-- end of CONTAINER  -->
-    </div><!-- end of innerContentWrapper  -->
+          </div>
   </section>
   <section id="approach-interior" class="content">
     <div class="texture"></div>
@@ -334,10 +344,10 @@
           <nav>
             <!-- Carousel nav -->
             <ol class="carousel-linked-nav">
-              <li class="active"><a href="#1">Home</a></li>
-              <li><a href="#2">About</a></li>
-              <li><a href="#3">Solutions</a></li>
-              <li><a href="#4">Approach</a></li>
+              <li class="active"><a href="#1">Examine</a></li>
+              <li><a href="#2">Enlighten</a></li>
+              <li><a href="#3">Engineer</a></li>
+              <li><a href="#4">Evolve</a></li>
             </ol>
           </nav>
         </div>
@@ -462,7 +472,16 @@
   <script src="js/bootstrap-carousel.js"></script>
   <script src="js/jquery.easing.1.3.js"></script>
   <script src="js/bootstrap-transition.js"></script>
+  <script src="js/Raphael.js"></script>
   <script src="js/satori.js"></script>
-
+  <script>
+    $(function() {
+      var circle = paper.circle(50, 40, 10);
+      // Sets the fill attribute of the circle to red (#f00)
+      circle.attr("fill", "#f00");
+      // Sets the stroke attribute of the circle to white
+      circle.attr("stroke", "#fff");
+    });
+  </script>
 </body>
 </html>
