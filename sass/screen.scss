@@ -482,7 +482,7 @@ form-horizontal {
   height: 40px;
   overflow: hidden;
   width: 100%;
-  background: #555;
+  background: #cacaca;
   z-index: 150;
 }
   
@@ -727,61 +727,61 @@ ul.slider li.slide {
   }
 
 
-#approach-interior ol.carousel-linked-nav {
+#approach-interior .carousel-linked-nav {
   width: 100%;
   position: absolute;
   z-index: 180;
   top: 10px;
   left: 27%;
 }
-#approach-interior ol.carousel-linked-nav li {
+#approach-interior .carousel-linked-nav li {
   float: left;
   margin-right: 4em;
   list-style: none;
-  color: white;
+  color: #6f6f6f;
 }
-#approach-interior ol.carousel-linked-nav li.active {
-  color: $approach-color;
+#approach-interior .carousel-linked-nav li.active {
+  color: #222222;
 }
-#approach-interior ol.carousel-linked-nav li a {
+#approach-interior .carousel-linked-nav li a {
   text-decoration: none;
   font-size: 0.8em;
   color: inherit;
 }
 .activelink {
-  color: $approach-color;
+  color: #222222;;
 }
 #approach-interior nav {
   position: relative;
   z-index:2500;
   width: 100%;
   height: 60px;
-  background: #555;
+  background: #cacaca;
 }
 // END OF APPROACH STYLING
 
 //SOLUTIONS CAROUSEL STYLING
-#solutions-interior ol.carousel-linked-nav {
+#solutions-interior .carousel-linked-nav {
   width: 100%;
   position: absolute;
   z-index: 180;
   top: 10px;
   left: 27%;
 }
-#solutions-interior ol.carousel-linked-nav li {
+#solutions-interior .carousel-linked-nav li {
   float: left;
   margin-right: 4em;
   list-style: none;
-  color: white;
+  color: #6f6f6f;
 }
-#solutions-interior ol.carousel-linked-nav li a {
+#solutions-interior .carousel-linked-nav li a {
   color: #000000;
   text-decoration: none;
   font-size: 0.8em;
   color: inherit;
 }
-#solutions-interior ol.carousel-linked-nav li.active {
-  color: $solutions-color;
+#solutions-interior .carousel-linked-nav li.active {
+  color: #222222;;
 }
 #solutions-interior nav {
   position: relative;
@@ -792,27 +792,27 @@ ul.slider li.slide {
 }
 // END OF SOLUTIONS STYLING
 //ABOUT CAROUSEL STYLING
-#about-interior ol.carousel-linked-nav {
+#about-interior .carousel-linked-nav {
   width: 100%;
   position: absolute;
   z-index: 180;
   top: 10px;
   left: 27%;
 }
-#about-interior ol.carousel-linked-nav li {
+#about-interior .carousel-linked-nav li {
   float: left;
   margin-right: 4em;
   list-style: none;
-  color: white;
+  color: #6f6f6f;
 }
-#about-interior ol.carousel-linked-nav li a {
+#about-interior .carousel-linked-nav li a {
   color: #000000;
   text-decoration: none;
   font-size: 0.8em;
   color: inherit;
 }
-#about-interior ol.carousel-linked-nav li.active {
-  color: $about-color;
+#about-interior .carousel-linked-nav li.active {
+  color: #222222;;
 }
 #about-interior nav {
   position: relative;
