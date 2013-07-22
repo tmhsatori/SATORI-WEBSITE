@@ -125,7 +125,7 @@
         var id = $(this).attr('href');
         var iSlide = (id + '-interior');
         var Slide = (id + '-exterior');
-        if( (id == '#approach') || (id == '#about')) {
+        if( (id == '#approach') || (id == '#about') || (id == '#solutions')) {
           $(".subnav").delay(100).fadeIn();
           $('.subnav').delay(100).animate({'height': "40px"}, 500, 'easeInQuad');
         }

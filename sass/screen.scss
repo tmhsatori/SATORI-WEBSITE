@@ -552,28 +552,49 @@ ul.slider li.slide {
   right: 85px;
   left: auto;
 }
-
-// APPROACH SLIDE STYLING FOR CAROUSEL
-// .approachSlide {
-//   width: 1024px;
-//   min-height: 250px;
-// }
+//END OF HOME CAROUSEL STYLING
+////ABOUT CAROUSEL STYLING
+.aboutSlide {
+  width: 100%;
+}
+.aboutSlide .bigFont {
+  width: 250px;
+  float: left;
+  padding: 10px;
+  margin-left: 10px;
+}
+.aboutSlide .bigFont h1 {
+  font-family: Homestead-Display;
+  font-size: 2.8em;
+  color: $about-color;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+.aboutSlide .bigFont h2 {
+  text-align: left;
+}
+.aboutSlide p {
+  width: 600px;
+  float: left;
+  padding: 10px;
+}
+// END OF ABOUT CAROUSEL STYLING
 #approachSlide .carousel-inner {
   width: 900px;
   margin: 0 auto;
-}
-.approachSlide {
-  width: 100%;
 }
 #approach-interior .carousel-control {
   position: absolute;
   top: 100%;
   left: 85px;
 }
-
 #approach-interior .carousel-control.right {
   right: 85px;
   left: auto;
+}
+.approachSlide {
+  width: 100%;
 }
 .approachSlide .bigFont {
   width: 250px;
@@ -585,7 +606,12 @@ ul.slider li.slide {
   font-family: Homestead-Display;
   font-size: 2.8em;
   color: $approach-color;
-  text-align: center;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+.approachSlide .bigFont h2 {
+  text-align: left;
 }
 .approachSlide p {
   width: 600px;
