@@ -11,6 +11,7 @@
         carouselLinks();
         //pageIdent();
         SlidenavUp();
+        carouselLinksAbout();
         carouselLinksApproach();
         carouselLinksSolutions();
         carouselSlidehome();
@@ -22,7 +23,7 @@
         window.onresize = function(event) {
           resizeDiv();
         };
-        $('#project05, #approachSlide, #solutions-carousel').each(function(){
+        $('#project05, #approachSlide, #solutions-carousel, #solutions-carousel').each(function(){
           $(this).carousel({
           interval: false
         });
@@ -30,7 +31,7 @@
     });
 
     function hideSlides() {
-      //locates all slides that ID name end with '-exterior' and '-interior'
+      //locates all slides with an ID name that ends with '-exterior' and '-interior'
       $("section[id$='-exterior']").hide();
       $("section[id$='-interior']").hide();
     }
@@ -72,6 +73,9 @@
           $(this).addClass('active');
           $("#main-nav").addClass(slideColor);
         }
+        $("#main-nav li a.active").click(function(e) {
+          e.preventDefault();
+        });
         var k = $("Slide").css('bottom');
         var bottom = $("#interior-page").css('bottom').replace('px','');
         var g = bottom;
@@ -86,6 +90,7 @@
               pageState = 'exterior';
             }
             else if(pageState == 'interior') {
+              e.preventDefault();
               hideInteriorSlides();
               $(iSlide).fadeIn();
               pageState == 'exterior';
@@ -96,7 +101,13 @@
             else if (pageState == 'exterior') {
               hideInteriorSlides();
               $(iSlide).fadeIn();
-              $('#interior-page').stop().animate({'bottom': '0px'}, 500, 'easeInQuad');
+              $('#interior-page').stop().animate({'bottom': '0px'}, 500, "easeInQuad", 
+                function(){
+                  var j = $('#interior-page').css('bottom');
+                    if( j == '0px' ) {
+                      pageIdent();
+                    }
+                });
               $(".subnav").delay(100).fadeIn();
               $('.subnav').delay(100).animate({'height': "40px"}, 500, 'easeInQuad');
               pageState = 'interior';
@@ -121,7 +132,14 @@
         e.preventDefault();
         hideInteriorSlides();
         $(iSlide).fadeIn();
-        $('#interior-page').stop().animate({'bottom': '0px'}, 500, 'easeInQuad');
+        //$('#interior-page').stop().animate({'bottom': '0px'}, 500, 'easeInQuad');
+        $('#interior-page').stop().animate({'bottom': '0px'}, 500, "easeInQuad",
+          function(){
+            var j = $('#interior-page').css('bottom');
+              if( j == '0px' ) {
+                pageIdent();
+              }
+            });
         pageState = 'interior';
          if( id == '#home') {
            $("#main-nav a").removeClass('active');
@@ -257,6 +275,16 @@
             }
         });
       }
+///CAROUSEL SLIDER CLICK EVENT FOR THE ABOUT PAGE
+function carouselLinksAbout() {
+        $('#about-interior .carousel-linked-nav > li > a').click(function() {
+            var item = Number($(this).attr('href').substring(1));
+            $('#about-interior .carousel').carousel(item - 1);
+            $('#about-interior .carousel-linked-nav .active').removeClass('active');
+            $(this).parent().addClass('active');
+            return false;
+        });
+      }
 //CAROUSEL SLIDER CLICK EVENT FOR THE APPROACH PAGE
 function carouselLinksApproach() {
         $('#approach-interior .carousel-linked-nav > li > a').click(function() {
@@ -349,25 +377,30 @@ function carouselSlideApproach() {
 
 function pageIdent() {
 var id = '';
-  if( ($("#about-interior").is(':visible')) || ($("#about-exterior").is(':visible'))) {
-    id = 'about';
-    alert('about');
-  }
-  else if( ($("#home-interior").is(':visible')) || ($("#home-exterior").is(':visible'))) {
+  if( $("#home-interior").is(':visible')) {
+      $("#main-nav[class*='-color']").removeClass();
+      $("#main-nav").addClass('solutions-color');
     id = 'home';
-    alert('home');
+  }
+  else if( ($("#about-interior").is(':visible')) || ($("#about-exterior").is(':visible'))) {
+      $("#main-nav[class*='-color']").removeClass();
+      $("#main-nav").addClass('about-color');
+    id = 'about';
   }
   else if( ($("#solutions-interior").is(':visible')) || ($("#solutions-exterior").is(':visible'))) {
+      $("#main-nav[class*='-color']").removeClass();
+      $("#main-nav").addClass('solutions-color');
     id = 'solutions';
-    alert('solutions');
   }
   else if( ($("#approach-interior").is(':visible')) || ($("#approach-exterior").is(':visible'))) {
+      $("#main-nav[class*='-color']").removeClass();
+      $("#main-nav").addClass('approach-color');
     id = 'approach';
-    alert('approach');
   }
   else if( ($("#contact-interior").is(':visible')) || ($("#contact-exterior").is(':visible'))) {
+      $("#main-nav").removeClass("div[class*='-color']");
+      $("#main-nav").addClass('contact-color');
     id = 'contact';
-    alert('contact');
   }
 
 }

@@ -14,11 +14,11 @@
 //Blanch
 
 //COLOR VARIABLES GLOBAL
-$solutions-color : #00cc7a;
-$approach-color : #e27985;
-$contact-color : #2cc0b7;
-$about-color : #ffbf24;
-$home-color : #ffffff;
+$solutions-color : #00cc7a;//green
+$approach-color : #e27985;//pink
+$contact-color : #2cc0b7;//blue
+$about-color : #ffbf24;//yellow
+$home-color : #ffffff;//white
 
 .greenColor {
   color: $solutions-color !important;
@@ -41,7 +41,14 @@ $home-color : #ffffff;
 a:hover, a:active, a:focus {
   outline: 0;
 }
-body {background: #424242; height: 100%; overflow: hidden; font-family: Gotham-Book; font-style: normal;}
+body {
+  background: #424242; 
+  height: 100%; 
+  overflow: hidden; 
+  font-family: Gotham-Book; 
+  font-style: normal;
+}
+
 .fitContainer {
   height: 1000px; 
   width: 100%; 
@@ -164,6 +171,13 @@ nav {
           }
           ul#main-nav li a.active {
             color: white !important;
+            cursor: default;
+          }
+          ul#main-nav.home-color li a:hover {
+            color: #ddd;
+          }
+          ul#main-nav.home-color li a.active {
+            color: #ddd !important;
             cursor: default;
           }
 
@@ -454,6 +468,9 @@ a.more {
 .top3 {
   margin-top: 50px;
 }
+.top4 {
+  margin-top: 25px;
+}
 
 form-horizontal {
   background: black;
@@ -465,7 +482,7 @@ form-horizontal {
   height: 40px;
   overflow: hidden;
   width: 100%;
-  background: #ccc;
+  background: #555;
   z-index: 150;
 }
   
@@ -550,7 +567,7 @@ ul.slider li.slide {
 }
 #approach-interior .carousel-control {
   position: absolute;
-  top: 60%;
+  top: 100%;
   left: 85px;
 }
 
@@ -683,6 +700,7 @@ ul.slider li.slide {
     height: 293px;
   }
 
+
 #approach-interior ol.carousel-linked-nav {
   width: 100%;
   position: absolute;
@@ -694,18 +712,25 @@ ul.slider li.slide {
   float: left;
   margin-right: 4em;
   list-style: none;
+  color: white;
+}
+#approach-interior ol.carousel-linked-nav li.active {
+  color: $approach-color;
 }
 #approach-interior ol.carousel-linked-nav li a {
-  color: #000000;
   text-decoration: none;
   font-size: 0.8em;
+  color: inherit;
+}
+.activelink {
+  color: $approach-color;
 }
 #approach-interior nav {
   position: relative;
   z-index:2500;
   width: 100%;
   height: 60px;
-  background: #ccc;
+  background: #555;
 }
 // END OF APPROACH STYLING
 
@@ -721,20 +746,56 @@ ul.slider li.slide {
   float: left;
   margin-right: 4em;
   list-style: none;
+  color: white;
 }
 #solutions-interior ol.carousel-linked-nav li a {
   color: #000000;
   text-decoration: none;
   font-size: 0.8em;
+  color: inherit;
+}
+#solutions-interior ol.carousel-linked-nav li.active {
+  color: $solutions-color;
 }
 #solutions-interior nav {
   position: relative;
   z-index:2500;
   width: 100%;
   height: 60px;
-  background: #ccc;
+  background: #555;
 }
-// END OF APPROACH STYLING
+// END OF SOLUTIONS STYLING
+//ABOUT CAROUSEL STYLING
+#about-interior ol.carousel-linked-nav {
+  width: 100%;
+  position: absolute;
+  z-index: 180;
+  top: 10px;
+  left: 27%;
+}
+#about-interior ol.carousel-linked-nav li {
+  float: left;
+  margin-right: 4em;
+  list-style: none;
+  color: white;
+}
+#about-interior ol.carousel-linked-nav li a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 0.8em;
+  color: inherit;
+}
+#about-interior ol.carousel-linked-nav li.active {
+  color: $about-color;
+}
+#about-interior nav {
+  position: relative;
+  z-index:2500;
+  width: 100%;
+  height: 60px;
+  background: #555;
+}
+//END OF ABOUT CAROUSELD STYLING
 .formWrapper {
   background: $contact-color;
   width: 100%;
