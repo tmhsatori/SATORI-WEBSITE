@@ -14,6 +14,7 @@
         carouselLinksAbout();
         carouselLinksApproach();
         carouselLinksSolutions();
+        //carouselArrowSolutions();
         carouselSlidehome();
         lampLinksApproach();
         carouselSlideApproach();
@@ -285,6 +286,11 @@ function carouselLinksAbout() {
             return false;
         });
       }
+        $('#about-interior .carousel').bind('slid', function() {
+            $('#about-interior .carousel-linked-nav li.active').removeClass('active');
+            var idx = $('#about-interior .carousel .item.active').index();
+            $('#about-interior .carousel-linked-nav li:eq(' + idx + ')').addClass('active');
+        });
 //CAROUSEL SLIDER CLICK EVENT FOR THE APPROACH PAGE
 function carouselLinksApproach() {
         $('#approach-interior .carousel-linked-nav > li > a').click(function() {
@@ -305,6 +311,12 @@ function carouselLinksSolutions() {
             return false;
         });
       }
+        $('#solutions-interior .carousel').bind('slid', function() {
+            $('#solutions-interior .carousel-linked-nav li.active').removeClass('active');
+            var idx = $('#solutions-interior .carousel .item.active').index();
+            $('#solutions-interior .carousel-linked-nav li:eq(' + idx + ')').addClass('active');
+        });
+
 //CAROUSEL SLIDER CLICK EVENT FOR THE APPROACH PAGE
 function lampLinksApproach() {
         $('#approach-interior .lamp-linked-nav > li > a').click(function() {
@@ -329,7 +341,6 @@ function carouselSlideApproach() {
           $('#approach-interior .carousel').bind('slid', function() {
           $('#approach-interior .carousel-linked-nav .active').removeClass('active');
           var idx = $('#approach-interior .carousel .item.active').index();
-          $('#approach-interior .carousel-linked-nav li:eq(' + idx + ')').addClass('active');
           var initSlide = function() {
             $('#approach-interior .carousel-linked-nav li:eq(' + idx + ')').addClass('active');
             lamps.animate({'top': '0', 'width': '300px'}, 900, 'linear');
